@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.5//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.crowdfunding.member.dao.MembershipDao">
+
+    <!--  join  -->
+    <insert id="join_membership" parameterType="com.crowdfunding.member.entity.MemberVo">
+        insert into membership_table
+            (userName, userId, userPassword, userPhone, userEmail)
+        values
+            (#{userName}, #{userId}, #{userPassword}, #{userPhone}, #{userEmail})
+    </insert>
+
+
+    <!--  login  -->
+    <select id="login_membership" parameterType="com.crowdfunding.member.entity.LoginVo" resultType="com.crowdfunding.member.entity.LoginVo">
+        select
+            userId, userPassword
+        from
+            membership_table
+        where
+            1=1
+            and userId=#{userId}
+            and userPassword=#{userPassword}
+    </select>
+
+    <!--  findId  -->
+    <select id="find_userId" parameterType="Map" resultType="String">
+        select
+	        userId
+        from membership_table
+        where
+	        1=1
+            and userName=#{userName}
+            and userPhone=#{userPhone};
+    </select>
+
+    <!--  findPassword  -->
+    <select id="find_userPassword" parameterType="Map" resultType="java.lang.Integer">
+        select
+            ifnull(1,0)
+        from membership_table
+        where
+            1=1
+            and userName=#{userName}
+            and userId=#{userId}
+            and userPhone=#{userPhone}
+    </select>
+
+    <!--  update userPassword  -->
+    <update id="change_userPassword" parameterType="Map">
+        update
+            membership_table
+        set
+            userPassword=#{newUserPassword}
+        where
+            userPhone=#{userPhone};
+
+    </update>
+
+
+    <!--  Delete User  -->
+</mapper>
