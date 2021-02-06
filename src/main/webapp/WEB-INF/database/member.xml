@@ -8,9 +8,11 @@
     <!--  join  -->
     <insert id="join_membership" parameterType="com.crowdfunding.member.entity.MemberVo">
         insert into membership_table
-            (userName, userId, userPassword, userPhone, userEmail)
+            (userName, userId, userPassword, userBirth, userPhone, userEmail,
+                userPostcode, userAddress, userDetailAddress, userExtraAddress)
         values
-            (#{userName}, #{userId}, #{userPassword}, #{userPhone}, #{userEmail})
+            (#{userName}, #{userId}, #{userPassword}, #{userBirth}, #{userPhone}, #{userEmail},
+                #{userPostcode}, #{userAddress}, #{userDetailAddress}, #{userExtraAddress})
     </insert>
 
 

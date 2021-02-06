@@ -8,21 +8,18 @@ public class MemberVo {
     private String userName;
     private String userId;
     private String userPassword;
+    private String userBirth;
     private String userPhone;
     private String userEmail;
+    private String userPostcode;
+    private String userAddress;
+    private String userDetailAddress;
+    private String userExtraAddress;
     private Date regDate;
-    private Date updateDate;
+
 
     public MemberVo() {
 
-    }
-
-    public MemberVo(String userName, String userId, String userPassword, String userPhone, String userEmail) {
-        this.userName = userName;
-        this.userId = userId;
-        this.userPassword = userPassword;
-        this.userPhone = userPhone;
-        this.userEmail = userEmail;
     }
 
     public int getId() {
@@ -57,6 +54,14 @@ public class MemberVo {
         this.userPassword = userPassword;
     }
 
+    public String getUserBirth() {
+        return userBirth;
+    }
+
+    public void setUserBirth(String userBirth) {
+        this.userBirth = userBirth;
+    }
+
     public String getUserPhone() {
         return userPhone;
     }
@@ -73,20 +78,44 @@ public class MemberVo {
         this.userEmail = userEmail;
     }
 
+    public String getUserPostcode() {
+        return userPostcode;
+    }
+
+    public void setUserPostcode(String userPostcode) {
+        this.userPostcode = userPostcode;
+    }
+
+    public String getUserAddress() {
+        return userAddress;
+    }
+
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
+    }
+
+    public String getUserDetailAddress() {
+        return userDetailAddress;
+    }
+
+    public void setUserDetailAddress(String userDetailAddress) {
+        this.userDetailAddress = userDetailAddress;
+    }
+
+    public String getUserExtraAddress() {
+        return userExtraAddress;
+    }
+
+    public void setUserExtraAddress(String userExtraAddress) {
+        this.userExtraAddress = userExtraAddress;
+    }
+
     public Date getRegDate() {
         return regDate;
     }
 
     public void setRegDate(Date regDate) {
         this.regDate = regDate;
-    }
-
-    public Date getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
     }
 
     @Override
@@ -96,10 +125,14 @@ public class MemberVo {
                 ", userName='" + userName + '\'' +
                 ", userId='" + userId + '\'' +
                 ", userPassword='" + userPassword + '\'' +
+                ", userBirth='" + userBirth + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userEmail='" + userEmail + '\'' +
+                ", userPostcode='" + userPostcode + '\'' +
+                ", userAddress='" + userAddress + '\'' +
+                ", userDetailAddress='" + userDetailAddress + '\'' +
+                ", userExtraAddress='" + userExtraAddress + '\'' +
                 ", regDate=" + regDate +
-                ", updateDate=" + updateDate +
                 '}';
     }
 }

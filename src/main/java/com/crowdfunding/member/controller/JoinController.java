@@ -34,17 +34,20 @@ public class JoinController {
     }
 
     // 회원가입
-    @GetMapping("/joinPage")
+    @GetMapping("/join")
     public String join() {
         return "/membership/join";
     }
 
-    @PostMapping("/joinPost")
+    @PostMapping("/join")
     public String joinPost(@ModelAttribute MemberVo memberVo, HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model, RedirectAttributes redirectAttributes) throws Exception {
 
         try {
+
+            logger.info(memberVo.toString());
+
             if (memberVo == null) {
-                logger.error(memberVo.toString());
+                logger.error("MemberVo values :: {}", memberVo.toString());
                 model.addAttribute("chk", false);
                 return "/membership/join";
             } else {

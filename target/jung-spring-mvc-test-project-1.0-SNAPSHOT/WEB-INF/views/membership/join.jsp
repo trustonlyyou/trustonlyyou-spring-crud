@@ -19,21 +19,13 @@
     <fieldset>
         <legend>회원가입</legend>
         <div>
-            <form name="joinForm" action="/membership/joinPost" method="post" onsubmit="return isNullofInputValues()">
+            <form name="joinForm" action="/membership/join" method="post" onsubmit="return isNullofInputValues()">
                 <div>
                     이름  <input type="text" name="userName" id="userName">
                 </div>
                 <div>
                     아이디  <input type="text" name="userId" id="userId">
                 </div>
-<%--                <div>--%>
-<%--                    비밀번호  <input type="password" id="userPassowrd" name="userPassword" onchange="isSamePasswordCheck()">--%>
-<%--                </div>--%>
-<%--                <div>--%>
-<%--                    비밀번호 확인 <input type="password" id="checkUserPassword" name="checkUserPassword" onchange="isSamePasswordCheck()">--%>
-<%--                    &nbsp;&nbsp;<span id="same"></span>--%>
-<%--                </div>--%>
-                <%--         Test          --%>
                 <div>
                     비밀번호 <input type="password" name="userPassword" id="pw" onchange="isSamePasswordCheck()">
                 </div>
@@ -52,15 +44,15 @@
                     이메일  <input type="email" name="userEmail" id="userEmail" placeholder="trustonlyyou@naver.com"><br>
                 </div>
                 <div>
-                    <input type="text" name="postcode" id="postcode" placeholder="우편번호">
+                    <input type="text" name="userPostcode" id="postcode" placeholder="우편번호">
                 </div>
                 <div>
                     <input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
                 </div>
                 <div>
-                    <input type="text" name="address" id="address" placeholder="주소" size="50"><br>
-                    <input type="text" name="detailAddress" id="detailAddress" placeholder="상세주소">
-                    <input type="text" name="extraAddress" id="extraAddress" placeholder="참고항목">
+                    <input type="text" name="userAddress" id="address" placeholder="주소" size="50"><br>
+                    <input type="text" name="userDetailAddress" id="detailAddress" placeholder="상세주소">
+                    <input type="text" name="userExtraAddress" id="extraAddress" placeholder="참고항목">
                 </div>
                 <div>
                     <input type="submit" value="완료">

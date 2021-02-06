@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jung-spring-mvc-test-project" target="11" />
+      <module name="jung-spring-mvc-test-project" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
