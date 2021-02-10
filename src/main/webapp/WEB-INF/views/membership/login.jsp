@@ -10,15 +10,7 @@
 
 <html>
 <head>
-    <title>Title</title>
-    <script>
-        var message = ${requestScope.get(message)};
-
-        if (message != null) {
-            alert(message);
-        }
-
-    </script>
+    <title>로그인</title>
 </head>
 <body>
     <section>
@@ -34,10 +26,10 @@
                 </div>
 
                 <nav style="height: 30px;">
-                    <a href="">FIND ID/PASSWORD</a>
+                    <a href="/membership/findId">FIND ID/PASSWORD</a>
                 </nav>
                 <nav style="height: 30px;">
-                    <a href="">JOIN US</a>
+                    <a href="/membership/join">JOIN US</a>
                 </nav>
 
                 <input type="submit" value="Login">
@@ -46,6 +38,15 @@
     </section>
 
 </body>
+
+<script>
+    var message = '${msg}';
+
+    if (message === 'fail') {
+        alert('아이디와 비밀번호를 확인해주세요.');
+    }
+</script>
+
 </html>
 
 

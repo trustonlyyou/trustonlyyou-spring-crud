@@ -37,42 +37,38 @@ public class FindIdAndPasswordController {
     public String findId(HttpServletRequest request, Model model, RedirectAttributes redirectAttributes) throws Exception {
 
         Map<String, Object> userInfo =  new HashMap<>();
+        String userName = "";
+        String userPhone = "";
+        String userId = "";
 
         try {
-            String userName = request.getParameter("userName");
-            String userPhone = request.getParameter("userPhone");
-
-            if((userName == null || "".equals(userName)) || (userPhone == null || "".equals(userPhone))) {
-                logger.error("userName :: '{}'", userName);
-                logger.error("userPhone :: '{}'", userPhone);
-                model.addAttribute("msg", "이름과 핸드폰 번호를 옳바르게 입력해 주세요.");
-                return "membership/findId";
-            }
+            userName = request.getParameter("userName");
+            userPhone = request.getParameter("userPhone");
 
             userInfo.put("userName", userName);
             userInfo.put("userPhone", userPhone);
 
-            String userId = service.findUserId(userInfo);
-
-            if (userId == null || "".equals(userId)) {
-                logger.error("User ID :: '{}'" , userId);
-                logger.error("Don't mach information");
-                model.addAttribute("msg", "입력하신 정보의 회원이 없습니다.");
-                return "/membership/findId";
-            }
-
-            redirectAttributes.addFlashAttribute("result", userId);
+            userId = service.findUserId(userInfo);
 
         } catch (Exception e) {
             e.printStackTrace();
             logger.error(e.getMessage());
         }
-        return "redirect:/membership/findIdSuccess";
+
+        if (userId == null || "".equals(userId)) {
+            logger.info("Don't mach information");
+            redirectAttributes.addFlashAttribute("result", "fail");
+            return "redirect:/membership/findIdResult";
+        }
+
+        redirectAttributes.addFlashAttribute("result", userId);
+
+        return "/membership/findIdResult";
     }
 
-    @GetMapping("/findIdSuccess")
+    @GetMapping("/findIdResult")
     public String findIdSuccess() {
-        return "/membership/findIdSuccess";
+        return "/membership/findIdResult";
     }
 
 

@@ -12,6 +12,6 @@
 </head>
 <body>
     <h1>회원 가입 완료 ${memberVo}</h1>
-    <input onclick="location.href='/'" value="홈페이지로 이동">
+    <input onclick="location.href='/'" value="홈페이지로 이동" readonly>
 </body>
 </html>

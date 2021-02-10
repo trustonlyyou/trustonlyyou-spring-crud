@@ -1,11 +1,13 @@
 package com.crowdfunding.util;
 
+import com.crowdfunding.member.entity.MemberVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +24,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
         HttpSession session = request.getSession();
 
-        if (session.getAttribute("result") != null) {
-            session.removeAttribute("result");
+        if (session.getAttribute("userInfo") != null) {
+            session.removeAttribute("userInfo");
         }
 
         return true;
@@ -33,23 +35,15 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
 
-        HttpSession session = request.getSession();
-        String login = (String) session.getAttribute("result");
+//        HttpSession session = request.getSession();
+//        MemberVo userInfo = (MemberVo) session.getAttribute("userInfo");
 
-        logger.info("User Session :: '{}'", login);
-
-        if (login != null) {
-            logger.info("new login");
-            response.sendRedirect("/");
-        }
-
-//        if (login == null) {
-//            logger.info("여기서 리다이렉트");
+//        if (userInfo == null) {
+//            logger.info("Session is null");
+//            // TODO: 2021-02-10 model 객체 어떻게 넘길래?
 //            response.sendRedirect("/membership/login");
 //        } else {
-//            response.sendRedirect("/");
-////            RequestDispatcher dispatcher = request.getRequestDispatcher("/");
-////            dispatcher.forward(request, response);
+//            logger.info("User Session :: '{}'", userInfo.getUserId());
 //        }
     }
 

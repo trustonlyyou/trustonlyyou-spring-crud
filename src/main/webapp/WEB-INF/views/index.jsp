@@ -16,15 +16,15 @@
       <header>
           <nav>
               <ul>
-                  <c:if test="${sessionScope.result == null}">
+                  <c:if test="${sessionScope.userInfo == null}">
                       <li>로그인 해주세요.</li>
                       <li><a href="/membership/login">로그인</a></li>
                       <li><a href="/membership/join">회원가입</a></li>
                       <li><a href="/membership/joinTest">javascript test Page</a></li>
                   </c:if>
 
-                  <c:if test="${sessionScope.result != null}">
-                      <li>환영합니다. ${sessionScope.result} 님</li>
+                  <c:if test="${sessionScope.userInfo != null}">
+                      <li>환영합니다. ${sessionScope.userInfo.userId} 님</li>
                       <li><a href="">MyPage</a></li>
                       <li><input type="button" value="LogOut" onclick="location.href='/membership/logout'"></li>
                   </c:if>

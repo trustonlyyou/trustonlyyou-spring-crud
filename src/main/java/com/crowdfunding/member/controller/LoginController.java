@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -33,7 +34,7 @@ public class LoginController {
     }
 
     @PostMapping("/loginPost")
-    public String loginPost(@ModelAttribute LoginVo loginVo, HttpServletRequest request, Model model, HttpSession session) throws Exception {
+    public String loginPost(@ModelAttribute LoginVo loginVo, HttpSession session, RedirectAttributes redirectAttributes) throws Exception {
 
         MemberVo userInfo = new MemberVo();
 
@@ -42,21 +43,28 @@ public class LoginController {
 
         try {
             userInfo = service.loginService(loginVo);
-            logger.error("loginService is error");
-            return "/membership/login";
         } catch (Exception e) {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
 
-        if (userInfo == null || "".equals(userInfo.getUserId())) {
-            logger.info("get userInfo is null or empty");
-            model.addAttribute("msg", "Fail Login Check Your ID or Password");
-            return "/membership/login";
-        } else {
-            session.setAttribute("userInfo", userInfo);
-            return "forward:/";
+        if (userInfo == null) {
+            logger.error("No userInfo");
+            redirectAttributes.addFlashAttribute("msg", "fail");
+            return "redirect:/membership/login";
         }
+
+        session.setAttribute("userInfo", userInfo);
+        return "forward:/";
+
+//        if (userInfo == null || "".equals(userInfo.getUserId())) {
+//            logger.info("get userInfo is null or empty");
+//            model.addAttribute("msg", "Fail Login Check Your ID or Password");
+//            return "/membership/login";
+//        } else {
+//            session.setAttribute("userInfo", userInfo);
+//            return "forward:/";
+//        }
 
 //        if (result != null && !"".equals(result)) {
 //            logger.info("result :: " + result);

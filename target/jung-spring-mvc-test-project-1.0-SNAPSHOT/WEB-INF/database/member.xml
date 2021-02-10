@@ -17,15 +17,17 @@
 
 
     <!--  login  -->
-    <select id="login_membership" parameterType="com.crowdfunding.member.entity.LoginVo" resultType="String">
+    <select id="login_membership" parameterType="com.crowdfunding.member.entity.LoginVo" resultType="com.crowdfunding.member.entity.MemberVo">
         select
-            userId
+	        userName, userId, userPhone, userEmail, userPostcode, userAddress, userDetailAddress, userExtraAddress
         from
-            membership_table
+	        membership_table
         where
-            1=1
-            and userId=#{userId}
-            and userPassword=#{userPassword}
+	        1=1
+            and
+                userId = #{userId}
+            and
+                userPassword = #{userPassword}
     </select>
 
     <!--  findId  -->

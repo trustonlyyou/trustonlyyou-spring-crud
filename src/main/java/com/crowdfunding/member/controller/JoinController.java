@@ -27,12 +27,6 @@ public class JoinController {
     @Autowired
     MembershipService service;
 
-    // Test
-    @GetMapping("/joinTest")
-    public String joinTest() {
-        return "/membership/jointest";
-    }
-
     // 회원가입
     @GetMapping("/join")
     public String join() {
@@ -40,27 +34,40 @@ public class JoinController {
     }
 
     @PostMapping("/join")
-    public String joinPost(@ModelAttribute MemberVo memberVo, HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model, RedirectAttributes redirectAttributes) throws Exception {
+    public String joinPost(@ModelAttribute MemberVo memberVo) throws Exception {
+
+        String encryptionPassword = EncryptionSHA256.encrypt(memberVo.getUserPassword());
+
+        memberVo.setUserPassword(encryptionPassword);
+        logger.info("New Client Join :: '{}'" , memberVo.getUserId());
 
         try {
-
-            logger.info(memberVo.toString());
-
-            if (memberVo == null) {
-                logger.error("MemberVo values :: {}", memberVo.toString());
-                model.addAttribute("chk", false);
-                return "/membership/join";
-            } else {
-                String encryptionPassword = EncryptionSHA256.encrypt(memberVo.getUserPassword());
-                memberVo.setUserPassword(encryptionPassword);
-                logger.info(memberVo.toString());
-                service.joinMembershipService(memberVo);
-            }
+            service.joinMembershipService(memberVo);
+            return "redirect:/";
         } catch (Exception e) {
             e.printStackTrace();
             logger.error(e.getMessage());
         }
+
         return "redirect:/membership/joinResult";
+//        try {
+//
+//            logger.info(memberVo.toString());
+//
+//            if (memberVo == null) {
+//                logger.error("MemberVo values :: {}", memberVo.toString());
+//                model.addAttribute("chk", false);
+//                return "/membership/join";
+//            } else {
+//                String encryptionPassword = EncryptionSHA256.encrypt(memberVo.getUserPassword());
+//                memberVo.setUserPassword(encryptionPassword);
+//                logger.info(memberVo.toString());
+//                service.joinMembershipService(memberVo);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            logger.error(e.getMessage());
+//        }
     }
 
     @GetMapping("/joinResult")
