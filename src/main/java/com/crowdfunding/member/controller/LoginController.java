@@ -1,6 +1,7 @@
 package com.crowdfunding.member.controller;
 
 import com.crowdfunding.member.entity.LoginVo;
+import com.crowdfunding.member.entity.MemberVo;
 import com.crowdfunding.member.service.MembershipService;
 import com.crowdfunding.util.EncryptionSHA256;
 import org.slf4j.Logger;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -31,31 +33,42 @@ public class LoginController {
     }
 
     @PostMapping("/loginPost")
-    public String loginPost(@ModelAttribute LoginVo loginVo, Model model, HttpSession session) throws Exception {
+    public String loginPost(@ModelAttribute LoginVo loginVo, HttpServletRequest request, Model model, HttpSession session) throws Exception {
+
+        MemberVo userInfo = new MemberVo();
+
+        String encryptionPassword = EncryptionSHA256.encrypt(loginVo.getUserPassword());
+        loginVo.setUserPassword(encryptionPassword);
+
         try {
-            String encryptionPassword = EncryptionSHA256.encrypt(loginVo.getUserPassword());
-            loginVo.setUserPassword(encryptionPassword);
-
-            LoginVo result = service.loginService(loginVo);
-
-            if (result == null) {
-                logger.error(result.toString());
-                model.addAttribute("message", "Fail Login");
-                return "membership/login";
-            } else {
-                session.setAttribute("loginId", result.getUserId()); // low level
-                model.addAttribute("loginId", result.getUserId());
-            }
-
+            userInfo = service.loginService(loginVo);
+            logger.error("loginService is error");
+            return "/membership/login";
         } catch (Exception e) {
-            e.printStackTrace();
             logger.error(e.getMessage());
+            e.printStackTrace();
         }
-        return "redirect:/";
+
+        if (userInfo == null || "".equals(userInfo.getUserId())) {
+            logger.info("get userInfo is null or empty");
+            model.addAttribute("msg", "Fail Login Check Your ID or Password");
+            return "/membership/login";
+        } else {
+            session.setAttribute("userInfo", userInfo);
+            return "forward:/";
+        }
+
+//        if (result != null && !"".equals(result)) {
+//            logger.info("result :: " + result);
+////            session.setAttribute("result", result);
+//            request.getSession().setAttribute("result", result);
+//            return "forward:/";
+//        } else {
+//            logger.info("result :: " + result);
+//            model.addAttribute("message", "Fail Login");
+//            logger.info("여기서 리다이렉트");
+//            return "redirect:/membership/login";
+//        }
     }
 
-//    @GetMapping("/loginSuccess")
-//    public String loginSuccess() {
-//        return "/membership/loginSuccess";
-//    }
 }

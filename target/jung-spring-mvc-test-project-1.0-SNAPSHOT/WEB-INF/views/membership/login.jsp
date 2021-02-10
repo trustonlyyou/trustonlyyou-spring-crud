@@ -11,6 +11,14 @@
 <html>
 <head>
     <title>Title</title>
+    <script>
+        var message = ${requestScope.get(message)};
+
+        if (message != null) {
+            alert(message);
+        }
+
+    </script>
 </head>
 <body>
     <section>

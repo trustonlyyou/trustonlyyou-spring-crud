@@ -22,7 +22,7 @@ public class MembershipDao {
         }
     }
 
-    public LoginVo login(LoginVo loginVo) throws Exception {
+    public MemberVo login(LoginVo loginVo) throws Exception {
         try {
             return sqlSessionTemplate.selectOne("login_membership", loginVo);
         } catch (Exception e) {

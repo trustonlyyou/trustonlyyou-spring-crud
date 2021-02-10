@@ -31,9 +31,9 @@
 		<constructor-arg index="0" ref="sqlSessionFactory"/>
 	</bean>
 
-	<!--	요즘은 위에 거를 주석 처리하고 interface 만 쓴다. 	-->
+	<!--	요즘은 interface 만 쓴다. Mybatis 3.0 이상 	-->
 <!--	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
 <!--		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
-<!--		<property name="basePackage" value="com.spring.mvc.dao"/>-->
+<!--		<property name="basePackage" value="com.crowdfunding.member.dao"/>-->
 <!--	</bean>-->
 </beans>

@@ -26,7 +26,7 @@ public class MembershipService {
         }
     }
 
-    public LoginVo loginService(LoginVo loginVo) throws Exception {
+    public MemberVo loginService(LoginVo loginVo) throws Exception {
         try {
             return membershipDao.login(loginVo);
         } catch (Exception e) {

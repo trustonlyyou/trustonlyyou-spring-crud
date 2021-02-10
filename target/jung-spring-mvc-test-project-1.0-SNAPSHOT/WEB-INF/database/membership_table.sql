@@ -1,7 +1,6 @@
 create table membership_table (
-    id int auto_increment primary key,
     userName char(20) not null,
-    userId varchar(30) not null unique,
+    userId varchar(30) not null primary key,
     userPassword varchar(100) not null,
     userBirth char(10) not null,
     userPhone char(20) not null,

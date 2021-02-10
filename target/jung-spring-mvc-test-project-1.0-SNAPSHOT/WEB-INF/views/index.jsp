@@ -16,14 +16,15 @@
       <header>
           <nav>
               <ul>
-                  <c:if test="${sessionScope.userId == null}">
+                  <c:if test="${sessionScope.result == null}">
                       <li>로그인 해주세요.</li>
                       <li><a href="/membership/login">로그인</a></li>
                       <li><a href="/membership/join">회원가입</a></li>
                       <li><a href="/membership/joinTest">javascript test Page</a></li>
                   </c:if>
 
-                  <c:if test="${sessionScope.userId} != null">
+                  <c:if test="${sessionScope.result != null}">
+                      <li>환영합니다. ${sessionScope.result} 님</li>
                       <li><a href="">MyPage</a></li>
                       <li><input type="button" onclick="location.href='/membership/logout'">LogOut</li>
                   </c:if>
@@ -31,7 +32,9 @@
           </nav>
       </header>
 
+      <hr>
 
+      <h1>Test :: ${result}</h1>
 
       <!-- Main -->
       <main>
