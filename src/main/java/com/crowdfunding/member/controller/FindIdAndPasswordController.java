@@ -79,38 +79,44 @@ public class FindIdAndPasswordController {
     }
 
     @PostMapping("/postFindPassword")
-    public String FindPassword(HttpServletRequest request, Model model, HttpSession session) throws Exception {
-        Map<String, Object> userInfo = new HashMap<>();
+    public String FindPassword(HttpServletRequest request, Model model, HttpSession session, RedirectAttributes redirectAttributes) throws Exception {
 
-        String userName = request.getParameter("userName");
-        String userId = request.getParameter("userId");
-        String userPhone = request.getParameter("userPhone");
+        Map<String, String> userInfo = new HashMap<>();
+        String userName = "";
+        String userId = "";
+        String userPhone = "";
+        Integer check = 0;
 
         try {
-            if((userName == null || "".equals(userName)) || (userId == null || "".equals(userId)) || (userPhone == null || "".equals(userPhone))) {
-                model.addAttribute("msg", "사용자의 정보를 옳바르게 입력해 주세요.");
-                return "/membership/findPassword";
-            }
+            userName = request.getParameter("userName");
+            userId = request.getParameter("userId");
+            userPhone = request.getParameter("userPhone");
 
             userInfo.put("userName", userName);
             userInfo.put("userId", userId);
             userInfo.put("userPhone", userPhone);
 
-            Integer check = service.isUserPassword(userInfo);
-
-            if(check == 0) {
-                model.addAttribute("msg", "입력하신 정보의 회원이 없습니다.");
-                return "/membership/findPassword";
-            }
-
-//            model.addAttribute("userPhone", userPhone); // 해당 객체 안넘어간다.
-            session.setAttribute("userPhone", userPhone);
+            check = service.isUserPassword(userInfo);
 
         } catch (Exception e) {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
+
+        if (check == 0) {
+            logger.info("No User Information");
+            redirectAttributes.addFlashAttribute("result", "fail");
+            return "redirect:/membership/findPasswordResult";
+        }
+
+        session.setAttribute("userInfo", userInfo);
+
         return "/membership/modifyPassword";
+    }
+
+    @GetMapping("/findPasswordResult")
+    public String passwordResult() {
+        return "/membership/findPasswordResult";
     }
 
     @GetMapping("/modifyPassword")
@@ -121,24 +127,25 @@ public class FindIdAndPasswordController {
     @PostMapping("/postModifyPassword")
     public String modifyPassword(HttpServletRequest request, Model model, HttpSession session) {
 
-        Map<String, Object> userInfo = new HashMap<>();
+        Map<String, String> userInfo = new HashMap<>();
+        String userName = "";
+        String userId = "";
+        String userPhone = "";
+        String newUserPassword = "";
 
         try {
-//            String userPhone = (String) model.getAttribute("userPhone");
-            String userPhone = (String) session.getAttribute("userPhone");
-            String newUserPassword = request.getParameter("newUserPassword");
 
-            if ((userPhone == null) || "".equals(userPhone) || (newUserPassword == null  || "".equals(newUserPassword))) {
-                logger.info("User Info Null or Empty");
-                model.addAttribute("msg", "옳바르게 입력해 주세요.");
-                return "/membership/modifyPassword";
+            userInfo = (Map<String, String>) session.getAttribute("userInfo");
+
+            userName = userInfo.get("userName");
+            userId = userInfo.get("userId");
+            userPhone = userInfo.get("userPhone");
+
+            if ((userName != null || !"".equals(userName)) || (userId != null || !"".equals(userId)) || (userPhone != null || !"".equals(userPhone))) {
+                session.removeAttribute("userInfo");
             }
 
-            session.invalidate();
             String newUserPasswordEncryption = EncryptionSHA256.encrypt(newUserPassword);
-
-            logger.info("userPhone :: '{}'", userPhone);
-            logger.info("newUserPassword :: '{}'", newUserPassword);
 
             userInfo.put("userPhone", userPhone);
             userInfo.put("newUserPassword", newUserPasswordEncryption);
@@ -149,6 +156,9 @@ public class FindIdAndPasswordController {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
+
+        logger.info("User Password Modify Success");
+
         return "redirect:/membership/modifyPasswordSuccess";
     }
 

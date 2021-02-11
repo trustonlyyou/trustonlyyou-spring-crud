@@ -7,44 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72d687a-77b4-446f-9a75-6397bac13b24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/failMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/isNull.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findPasswordResult.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/FindIdAndPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/FindIdAndPasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/JoinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/util/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/util/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/MembershipController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/dao/MembershipDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/dao/MembershipDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/service/MembershipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/service/MembershipService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/member.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/member.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/membership_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/query/membership_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findId.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findId.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findIdSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findIdResult.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/join_result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/join_result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/jointest.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findIdResult.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findIdResult.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findPassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/findPassword.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/FindIdAndPasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/FindIdAndPasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/modifyPassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/modifyPassword.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/isNull.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/isNull.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/passwordCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/passwordCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/JoinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/JoinController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/dao/MembershipDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/dao/MembershipDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/service/MembershipService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/service/MembershipService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/util/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/util/LoginInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/FindIdAndPasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/FindIdAndPasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/JoinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/JoinController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/dao/MembershipDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/dao/MembershipDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/service/MembershipService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/service/MembershipService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/util/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/util/LoginInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/member.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/member.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/membership_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/findId.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/findId.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/join_result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/join_result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/jointest.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +39,8 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -210,7 +188,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -246,6 +224,8 @@
       <workItem from="1612629610774" duration="4784000" />
       <workItem from="1612682125549" duration="6102000" />
       <workItem from="1612838556875" duration="12948000" />
+      <workItem from="1613047565937" duration="963000" />
+      <workItem from="1613055864880" duration="5725000" />
     </task>
     <task id="LOCAL-00001" summary="Desktop Clone Test">
       <created>1612629744325</created>
@@ -341,38 +321,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1008" height="427" key="GridCell.Tab.-1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610820411879" />
-    <state width="1596" height="286" key="GridCell.Tab.0.bottom" timestamp="1612980824287">
+    <state width="1619" height="330" key="GridCell.Tab.0.bottom" timestamp="1613062908844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824287" />
-    <state width="1596" height="286" key="GridCell.Tab.0.center" timestamp="1612980824287">
+    <state width="1619" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908844" />
+    <state width="1619" height="330" key="GridCell.Tab.0.center" timestamp="1613062908843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824287" />
-    <state width="1596" height="286" key="GridCell.Tab.0.left" timestamp="1612980824287">
+    <state width="1619" height="330" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908843" />
+    <state width="1619" height="330" key="GridCell.Tab.0.left" timestamp="1613062908843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824287" />
-    <state width="1596" height="286" key="GridCell.Tab.0.right" timestamp="1612980824287">
+    <state width="1619" height="330" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908843" />
+    <state width="1619" height="330" key="GridCell.Tab.0.right" timestamp="1613062908843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824287" />
-    <state width="1596" height="286" key="GridCell.Tab.1.bottom" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908843" />
+    <state width="1619" height="330" key="GridCell.Tab.1.bottom" timestamp="1613062908845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
-    <state width="1596" height="286" key="GridCell.Tab.1.center" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908845" />
+    <state width="1619" height="330" key="GridCell.Tab.1.center" timestamp="1613062908844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
-    <state width="1596" height="286" key="GridCell.Tab.1.left" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908844" />
+    <state width="1619" height="330" key="GridCell.Tab.1.left" timestamp="1613062908844">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
-    <state width="1596" height="286" key="GridCell.Tab.1.right" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908844" />
+    <state width="1619" height="330" key="GridCell.Tab.1.right" timestamp="1613062908845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
+    <state width="1619" height="330" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908845" />
     <state width="1008" height="326" key="GridCell.Tab.10.bottom" timestamp="1610815086602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -389,22 +369,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1008" height="326" key="GridCell.Tab.10.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610815086601" />
-    <state width="1596" height="286" key="GridCell.Tab.2.bottom" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.2.bottom" timestamp="1613062908846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
-    <state width="1596" height="286" key="GridCell.Tab.2.center" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908846" />
+    <state width="1619" height="330" key="GridCell.Tab.2.center" timestamp="1613062908845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
-    <state width="1596" height="286" key="GridCell.Tab.2.left" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908845" />
+    <state width="1619" height="330" key="GridCell.Tab.2.left" timestamp="1613062908845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
-    <state width="1596" height="286" key="GridCell.Tab.2.right" timestamp="1612980824288">
+    <state width="1619" height="330" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908845" />
+    <state width="1619" height="330" key="GridCell.Tab.2.right" timestamp="1613062908846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1596" height="286" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612980824288" />
+    <state width="1619" height="330" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613062908846" />
     <state width="1596" height="342" key="GridCell.Tab.3.bottom" timestamp="1612636124278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -465,6 +445,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1612629861313" />
+    <state x="522" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1613055866956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="522" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613055866956" />
     <state x="844" y="165" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1610820848620">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -481,9 +465,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="109" y="75" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1612682876857" />
-    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1612980283996">
+    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1613062108867">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612980283996" />
+    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1613062108867" />
   </component>
 </project>

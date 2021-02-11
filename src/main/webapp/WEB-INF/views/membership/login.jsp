@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>로그인</title>
+    <%--  todo :: Null Check javaScript  --%>
 </head>
 <body>
     <section>

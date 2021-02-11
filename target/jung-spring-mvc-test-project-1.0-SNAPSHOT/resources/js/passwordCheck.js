@@ -19,7 +19,7 @@ function isSamePasswordCheck () {
     if (checkSc === 0) {
         window.alert('!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.')
         document.getElementById('pw').value='';
-        document.getElementById('pwd').focus();
+        document.getElementById('pw').focus();
     }
 
     if(document.getElementById('pw').value !=='' && document.getElementById('pw2').value !== ''){

@@ -34,7 +34,8 @@
     <select id="find_userId" parameterType="Map" resultType="String">
         select
 	        userId
-        from membership_table
+        from
+            membership_table
         where
 	        1=1
             and userName = #{userName}
@@ -44,8 +45,9 @@
     <!--  findPassword  -->
     <select id="find_userPassword" parameterType="Map" resultType="java.lang.Integer">
         select
-            ifnull(1,0)
-        from membership_table
+            count(*)
+        from
+            membership_table
         where
             1=1
             and userName=#{userName}
@@ -53,7 +55,7 @@
             and userPhone=#{userPhone}
     </select>
 
-    <!--  update userPassword  -->
+    <!--  modify userPassword  -->
     <update id="change_userPassword" parameterType="Map">
         update
             membership_table

@@ -38,7 +38,7 @@ public class MembershipDao {
         }
     }
 
-    public Integer isUserPassword(Map<String, Object> param) throws Exception {
+    public Integer isUserPassword(Map<String, String> param) throws Exception {
         try {
             return sqlSessionTemplate.selectOne("find_userPassword", param);
         } catch (Exception e) {
@@ -46,7 +46,7 @@ public class MembershipDao {
         }
     }
 
-    public void changeUserPassword(Map<String, Object> param) throws Exception {
+    public void changeUserPassword(Map<String, String> param) throws Exception {
         try {
             sqlSessionTemplate.update("change_userPassword", param);
         } catch (Exception e) {

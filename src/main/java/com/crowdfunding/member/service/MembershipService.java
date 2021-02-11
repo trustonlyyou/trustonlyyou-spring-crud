@@ -42,7 +42,7 @@ public class MembershipService {
         }
     }
 
-    public Integer isUserPassword(Map<String, Object> param) throws Exception {
+    public Integer isUserPassword(Map<String, String> param) throws Exception {
         try {
             return membershipDao.isUserPassword(param);
         } catch (Exception e) {
@@ -50,7 +50,7 @@ public class MembershipService {
         }
     }
 
-    public void changeUserPassword(Map<String, Object> param) throws Exception {
+    public void changeUserPassword(Map<String, String> param) throws Exception {
         try {
             membershipDao.changeUserPassword(param);
         } catch (Exception e) {

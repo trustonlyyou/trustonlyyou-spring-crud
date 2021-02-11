@@ -15,14 +15,14 @@
 <body>
     <c:if test="${result eq 'fail'}">
         <h1>입력하신 회원의 정보가 없습니다.</h1>
-        <input type="button" onclick="location.href='/membership/findId'" value="아이디 비밀번호 찾기">
+        <input type="button" onclick="location.href='/membership/findId'" value="아이디 비밀번호 찾기" readonly>
     </c:if>
 
     <c:if test="${result ne 'fail'}">
         <h1>Find ID Success</h1>
         User ID :: ${result}
-        <input type="button" onclick="location.href='/membership/findPassword'" value="비밀버호 찾기">
-        <input type="button" onclick="location.href='/'" value="Main Page">
+        <input type="button" onclick="location.href='/membership/findPassword'" value="비밀번호 찾기" readonly>
+        <input type="button" onclick="location.href='/'" value="Main Page" readonly>
     </c:if>
 </body>
 </html>

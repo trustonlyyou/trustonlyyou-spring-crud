@@ -9,19 +9,17 @@
 <html>
 <head>
     <title>Title</title>
+    <script type="text/javascript" src="/resources/js/passwordCheck.js"></script>
 </head>
 <body>
-<form action="/membership/postModifyPassword" method="post">
-    <table border="2">
-        <tr>
-            <td>비밀번호 </td><td><label><input type="password" name="newUserPassword" size="15"></label></td>
-        </tr>
-        <tr>
-            <td>비밀번호 확인 </td><td><label><input type="password" size="15"></label></td>
-            <%--      Ajax 아직 모름... 시벌 것      --%>
-        </tr>
-    </table>
-    <input type="submit" value="확인">
-</form>
+    <form action="/membership/postModifyPassword" method="post">
+        <div>
+            비밀번호 <input type="password" name="userPassword" id="pw" onchange="isSamePasswordCheck()">
+        </div>
+        <div>
+            비밀번호 확인 <input type="password" name="checkUserPassword" id="pw2" onchange="isSamePasswordCheck()">&nbsp;<span id="same"></span>
+        </div>
+        <input type="submit" value="확인">
+    </form>
 </body>
 </html>

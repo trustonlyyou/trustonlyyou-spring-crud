@@ -43,7 +43,6 @@ public class JoinController {
 
         try {
             service.joinMembershipService(memberVo);
-            return "redirect:/";
         } catch (Exception e) {
             e.printStackTrace();
             logger.error(e.getMessage());
