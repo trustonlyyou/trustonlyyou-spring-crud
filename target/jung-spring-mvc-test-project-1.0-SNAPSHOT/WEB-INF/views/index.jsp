@@ -25,7 +25,7 @@
 
                   <c:if test="${sessionScope.userInfo != null}">
                       <li>환영합니다. ${sessionScope.userInfo.userId} 님</li>
-                      <li><a href="">MyPage</a></li>
+                      <li><a href="/membership/mypage">MyPage</a></li>
                       <li><input type="button" value="LogOut" onclick="location.href='/membership/logout'"></li>
                   </c:if>
               </ul>

@@ -56,27 +56,5 @@ public class LoginController {
 
         session.setAttribute("userInfo", userInfo);
         return "forward:/";
-
-//        if (userInfo == null || "".equals(userInfo.getUserId())) {
-//            logger.info("get userInfo is null or empty");
-//            model.addAttribute("msg", "Fail Login Check Your ID or Password");
-//            return "/membership/login";
-//        } else {
-//            session.setAttribute("userInfo", userInfo);
-//            return "forward:/";
-//        }
-
-//        if (result != null && !"".equals(result)) {
-//            logger.info("result :: " + result);
-////            session.setAttribute("result", result);
-//            request.getSession().setAttribute("result", result);
-//            return "forward:/";
-//        } else {
-//            logger.info("result :: " + result);
-//            model.addAttribute("message", "Fail Login");
-//            logger.info("여기서 리다이렉트");
-//            return "redirect:/membership/login";
-//        }
     }
-
 }

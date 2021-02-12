@@ -31,14 +31,4 @@ function findPassword() {
         findPasswordForm.userPhone.focus();
         return false;
     }
-
-
 }
-
-
-// <tr>
-// <td>이름 </td><td><label><input type="text" name="userName" size="15"></label></td>
-// </tr>
-// <tr>
-// <td>핸드폰 번호 </td><td><label><input type="text" name="userPhone" size="20"></label></td>
-// </tr>

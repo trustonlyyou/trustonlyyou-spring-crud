@@ -21,7 +21,7 @@
     <c:if test="${result ne 'fail'}">
         <h1>Find ID Success</h1>
         User ID :: ${result}
-        <input type="button" onclick="location.href='/membership/findPassword'" value="비밀번호 찾기" readonly>
+        <input type="button" onclick="location.href='/membership/findPassword'" value="비밀번호 찾기" readonly><br>
         <input type="button" onclick="location.href='/'" value="Main Page" readonly>
     </c:if>
 </body>
