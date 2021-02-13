@@ -19,7 +19,7 @@
     <!--  login  -->
     <select id="login_membership" parameterType="com.crowdfunding.member.entity.LoginVo" resultType="com.crowdfunding.member.entity.MemberVo">
         select
-	        userName, userId, userPhone, userEmail, userPostcode, userAddress, userDetailAddress, userExtraAddress
+	        userName, userId, replace(userPassword, userPassword, '****') as userPassword, userPhoneFormat(#{userId}) as userPhone, userEmail, userPostcode, userAddressFormat(#{userId}) as userAddress, userDetailAddress, userExtraAddress
         from
 	        membership_table
         where
@@ -67,5 +67,4 @@
     </update>
 
 
-    <!--  Delete User  -->
 </mapper>

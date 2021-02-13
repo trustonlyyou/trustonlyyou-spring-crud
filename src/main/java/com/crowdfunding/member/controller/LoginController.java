@@ -54,6 +54,7 @@ public class LoginController {
             return "redirect:/membership/login";
         }
 
+        logger.info(userInfo.toString());
         session.setAttribute("userInfo", userInfo);
         return "forward:/";
     }

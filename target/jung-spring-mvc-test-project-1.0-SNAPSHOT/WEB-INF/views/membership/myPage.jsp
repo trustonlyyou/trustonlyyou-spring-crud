@@ -29,8 +29,8 @@
         </form:form>
     </div>
     <div>
-        <form:form modelAttribute="userInfo">
-            비밀번호 : <form:password path="userPassword" readonly="true"/>
+        <form:form modelAttribute="userInfo" action="/membership/modifyPassword" method="get">
+            비밀번호 : <form:password path="userPassword" readonly="true" showPassword="true"/>
             <span>
                 <form:button>비밀번호 수정</form:button>
             </span>
