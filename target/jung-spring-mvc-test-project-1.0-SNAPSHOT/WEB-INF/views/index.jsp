@@ -34,18 +34,11 @@
 
       <hr>
 
-      <h1>Test :: ${result}</h1>
-
       <!-- Main -->
       <main>
           <nav>
               <ul>
-                  <li><a href=""></a>CROWD FUNDING</li>
-                  <li><a href=""></a>이용안내</li>
-                  <li><a href=""></a>진행중인 펀딩</li>
-                  <li><a href=""></a>진행완료 펀딩</li>
-                  <li><a href=""></a>삽니다.</li>
-                  <li><a href=""></a>팝니다.</li>
+                  <li><a href="/crowdfunding/free/board">자유게시판</a></li>
               </ul>
           </nav>
       </main>

@@ -1,7 +1,7 @@
 package com.crowdfunding.member.controller;
 
 import com.crowdfunding.member.service.MembershipService;
-import com.crowdfunding.util.EncryptionSHA256;
+import com.crowdfunding.commons.util.EncryptionSHA256;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

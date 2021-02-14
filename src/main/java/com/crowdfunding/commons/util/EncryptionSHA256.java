@@ -1,4 +1,4 @@
-package com.crowdfunding.util;
+package com.crowdfunding.commons.util;
 
 import java.security.MessageDigest;
 

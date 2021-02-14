@@ -7,7 +7,7 @@
 
     <!--  join  -->
     <insert id="join_membership" parameterType="com.crowdfunding.member.entity.MemberVo">
-        insert into membership_table
+        insert into membershiptable
             (userName, userId, userPassword, userBirth, userPhone, userEmail,
             userPostcode, userAddress, userDetailAddress, userExtraAddress)
         values
@@ -21,7 +21,7 @@
         select
 	        userName, userId, replace(userPassword, userPassword, '****') as userPassword, userPhoneFormat(#{userId}) as userPhone, userEmail, userPostcode, userAddressFormat(#{userId}) as userAddress, userDetailAddress, userExtraAddress
         from
-	        membership_table
+	        membershiptable
         where
 	        1=1
             and
@@ -35,7 +35,7 @@
         select
 	        userId
         from
-            membership_table
+            membershiptable
         where
 	        1=1
             and userName = #{userName}
@@ -47,7 +47,7 @@
         select
             count(*)
         from
-            membership_table
+            membershiptable
         where
             1=1
             and userName=#{userName}
@@ -58,12 +58,11 @@
     <!--  modify userPassword  -->
     <update id="change_userPassword" parameterType="Map">
         update
-            membership_table
+            membershiptable
         set
             userPassword=#{newUserPassword}
         where
-            userPhone=#{userPhone};
-
+            userPhone=#{userPhone}
     </update>
 
 

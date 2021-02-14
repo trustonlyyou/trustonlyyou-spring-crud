@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.5//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.crowdfunding.member.dao.MybatisTestDao">
+    <select id="freeBoardList" resultType="com.crowdfunding.board.entity.FreeBoardVo">
+        <![CDATA[
+--             set @ROWNUM := 0  -- // mybatis는 에러를 발생한다.
+--             select
+--                 @ROWNUM := @ROWNUM + 1 as num , title, regdate, viewCnt, membershipTableUserId
+--             from
+--                 freeboard
+--             where
+--                 bno > 0
+--             order by
+--                 regdate desc
+
+            select
+                @ROWNUM := @ROWNUM + 1 as num, title, regdate, viewCnt, membershipTableUserId
+            from
+                freeboard , (select @ROWNUM := 0) tmp
+            where
+                bno > 0
+            order by
+                regdate desc
+        ]]>
+    </select>
+
+
+</mapper>

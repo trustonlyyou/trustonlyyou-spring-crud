@@ -25,7 +25,7 @@
         <beans:property name="location" value="/WEB-INF/properties/mysqlDatabase.properties"/>
     </beans:bean>
 
-    <beans:bean id="loginInterceptor" class="com.crowdfunding.util.LoginInterceptor"/>
+    <beans:bean id="loginInterceptor" class="com.crowdfunding.commons.util.LoginInterceptor"/>
 
     <interceptors>
         <interceptor>
