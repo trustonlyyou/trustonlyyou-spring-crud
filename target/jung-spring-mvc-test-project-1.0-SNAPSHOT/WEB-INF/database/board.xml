@@ -30,5 +30,18 @@
         ]]>
     </select>
 
+    <select id="detailData" parameterType="int" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
+        <![CDATA[
+            select
+                title, regdate, content, viewCnt, membershipTableUserId
+            from
+                freeboard
+            where
+                bno > 0
+            and
+                bno = #{numCalc}
+        ]]>
+    </select>
+
 
 </mapper>

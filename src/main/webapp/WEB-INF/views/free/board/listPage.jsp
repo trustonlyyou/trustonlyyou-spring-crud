@@ -55,8 +55,9 @@
                 <%--  전체 레코드 수 - ( (현재 페이지 번호 - 1) * 한 페이지당 보여지는 레코드 수 + 현재 게시물 출력 순서 )--%>
                 <c:forEach items="${list}" var="boardVo" varStatus="status">
                     <tr>
-                        <td>${status.count}</td><%--  status.index 로 하면 0 부터 시작 , count 는 1 부터 시작    --%>
-                        <td><a href="/crowdfunding/free/board/detail/?num=${boardVo.num}">${boardVo.title}</a></td>
+                        <td>${pageMaker.totalCount - (status.index + 1) + 1}</td>
+<%--                        <td>${status.index + 1}</td>&lt;%&ndash;  status.index 로 하면 0 부터 시작 , count 는 1 부터 시작    &ndash;%&gt;--%>
+                        <td><a href="/crowdfunding/free/board/detail/?num=${pageMaker.totalCount - (status.index + 1) + 1}">${boardVo.title}</a></td>
                         <td>${boardVo.membershipTableUserId}</td>
                         <td>${boardVo.regdate}</td>
                         <td>${boardVo.viewCnt}</td>

@@ -29,4 +29,12 @@ public class FreeBoardService {
             throw e;
         }
     }
+
+    public FreeBoardVo getDetailData(int numCalc) throws Exception {
+        try {
+            return boardDao.getDetailData(numCalc);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

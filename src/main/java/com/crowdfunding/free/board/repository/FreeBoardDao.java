@@ -29,4 +29,12 @@ public class FreeBoardDao {
             throw e;
         }
     }
+
+    public FreeBoardVo getDetailData(int numCalc) throws Exception {
+        try {
+            return sessionTemplate.selectOne("detailData", numCalc);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }
