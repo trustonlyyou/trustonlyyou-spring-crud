@@ -38,7 +38,7 @@
       <main>
           <nav>
               <ul>
-                  <li><a href="/crowdfunding/free/board">자유게시판</a></li>
+                  <li><a href="/crowdfunding/free/board/listPage">자유게시판</a></li>
               </ul>
           </nav>
       </main>

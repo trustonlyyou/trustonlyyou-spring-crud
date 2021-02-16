@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>공지사항</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
     <header>
@@ -50,11 +51,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${boardVoList}" var="boardVo">
+
+                <%--  전체 레코드 수 - ( (현재 페이지 번호 - 1) * 한 페이지당 보여지는 레코드 수 + 현재 게시물 출력 순서 )--%>
+                <c:forEach items="${list}" var="boardVo" varStatus="status">
                     <tr>
-                        <td>${boardVo.num}</td>
-                        <td><a href="">${boardVo.title}</a></td>
-                        <td>${boardVo.membershipTableUserId}}</td>
+                        <td>${status.count}</td><%--  status.index 로 하면 0 부터 시작 , count 는 1 부터 시작    --%>
+                        <td><a href="/crowdfunding/free/board/detail/?num=${boardVo.num}">${boardVo.title}</a></td>
+                        <td>${boardVo.membershipTableUserId}</td>
                         <td>${boardVo.regdate}</td>
                         <td>${boardVo.viewCnt}</td>
                     </tr>
@@ -112,11 +115,51 @@
                 </tbody>
             </table>
         </div>
-        <div>
+
+        <div style="text-align: right">
             <form action="" method="get">
                 <input type="submit" value="글쓰기">
             </form>
         </div>
+
+        <div class="w3-bar">
+            <a href="#" class="w3-button">&laquo;</a>
+            <a href="#" class="w3-button">1</a>
+            <a href="#" class="w3-button">2</a>
+            <a href="#" class="w3-button">3</a>
+            <a href="#" class="w3-button">4</a>
+            <a href="#" class="w3-button">&raquo;&raquo;</a>
+        </div>
     </main>
+
+
+
+<%--        <div>--%>
+<%--            <h3 class="hidden">현재 페이지</h3>--%>
+<%--            <div><span>1</span> / 1 pages</div>--%>
+<%--            <c:if test="${pageMaker.prev}">--%>
+<%--                <li><a href="/crowdfunding/free/board/listPage?page${pageMaker.startPage - 1}"></a></li>--%>
+<%--            </c:if>--%>
+<%--        </div>--%>
+
+<%--        <div>--%>
+<%--            <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="index">--%>
+<%--                <li>--%>
+<%--                    <c:out value="${pageMaker.page == index?'class =active':''}" />--%>
+<%--                    <a href="/crowdfunding/free/board/listPage?page${index}">${index}}</a>--%>
+<%--                </li>--%>
+<%--            </c:forEach>--%>
+<%--        </div>--%>
+
+<%--        <c:if test="${pageMaker.next && pageMaker.endPage > 0}">--%>
+<%--            <li><a href="/crowdfunding/free/borad/listPage?page=${pageMaker.endPage + 1}">&raquo;</a></li>--%>
+<%--        </c:if>--%>
+
+<%--        <div>--%>
+<%--            <form action="" method="get">--%>
+<%--                <input type="submit" value="글쓰기">--%>
+<%--            </form>--%>
+<%--        </div>--%>
+<%--    </main>--%>
 </body>
 </html>
