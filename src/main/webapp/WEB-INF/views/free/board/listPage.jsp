@@ -43,7 +43,7 @@
                 <a href="/">메인 화면</a>
             </h2>
             <h2>
-                <a href="/crowdfunding/free/userBoard/listPage">나의 게시글 보기</a>
+                <a href="/crowdfunding/free/userBoard/myBoardList">나의 게시글 보기</a>
             </h2>
         </nav>
 

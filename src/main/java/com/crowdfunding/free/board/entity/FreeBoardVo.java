@@ -4,18 +4,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class FreeBoardVo {
-    private Integer num;
+    private int num;
     private String title;
     private String content;
     private Date regdate;
     private int viewCnt;
     private String userId;
 
-    public Integer getNum() {
+    public int getNum() {
         return num;
     }
 
-    public void setNum(Integer num) {
+    public void setNum(int num) {
         this.num = num;
     }
 

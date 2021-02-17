@@ -61,7 +61,7 @@
 
     <select id="myBoardList" parameterType="Map" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
         select
-            f.bno, m.userId, f.title, f.content, f.regdate, f.viewcnt
+            f.bno as num , m.userId, f.title, f.content, f.regdate, f.viewcnt
         from
             freeboard f
         left join
@@ -83,5 +83,24 @@
             freeboard
         where
             userId = #{userId}
+    </select>
+
+    <select id="myBoardDetailData" parameterType="Map" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
+        <![CDATA[
+            select
+                f.bno as num , m.userId, f.title, f.content, f.regdate, f.viewcnt
+            from
+                freeboard f
+            left join
+                membershiptable m
+            on
+                f.userId = m.userId
+            where
+                f.bno = #{num}
+                and
+                m.userId = #{userId}
+            order by
+                regdate desc
+        ]]>
     </select>
 </mapper>

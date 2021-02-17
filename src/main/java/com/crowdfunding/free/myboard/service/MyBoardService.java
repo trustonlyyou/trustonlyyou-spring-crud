@@ -30,4 +30,12 @@ public class MyBoardService {
             throw e;
         }
     }
+
+    public FreeBoardVo getMyBoardDetailData(Map<String, Object> map) throws Exception {
+        try {
+            return boardDao.getMyBoardDetailData(map);
+        } catch (Exception e) {
+            throw e;
+        }
+     }
 }

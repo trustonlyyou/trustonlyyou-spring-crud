@@ -1,5 +1,6 @@
 package com.crowdfunding.free.myboard.repository;
 
+import com.crowdfunding.commons.util.PageMaker;
 import com.crowdfunding.free.board.entity.FreeBoardVo;
 import com.crowdfunding.free.myboard.entity.MyBoardCriteria;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -26,6 +27,14 @@ public class MyBoardDao {
     public int getMyBoardCountingData(String userId) throws Exception {
         try {
             return sessionTemplate.selectOne("myBoardCountingData", userId);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    public FreeBoardVo getMyBoardDetailData(Map<String, Object> map) throws Exception {
+        try {
+            return sessionTemplate.selectOne("myBoardDetailData", map);
         } catch (Exception e) {
             throw e;
         }

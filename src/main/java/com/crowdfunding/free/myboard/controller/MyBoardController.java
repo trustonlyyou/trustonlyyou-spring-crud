@@ -29,7 +29,7 @@ public class MyBoardController {
     @Autowired
     private MyBoardService service;
 
-    @GetMapping("/userBoard/listPage")
+    @GetMapping("/userBoard/myBoardList")
     public String myBoard(@RequestParam(defaultValue = "1") int page, Model model, Criteria criteria, HttpSession session) throws Exception {
         Map<String, Object> map = new HashMap<>(); // 세션의 userId 와 페이저 정보를 넣는다.
         List<FreeBoardVo> list = new ArrayList<>();
@@ -53,7 +53,39 @@ public class MyBoardController {
         model.addAttribute("list", list);
         model.addAttribute("pageMaker", pageMaker);
 
-        return "/free/userBoard/listPage";
+        return "/free/userBoard/myBoardList";
+    }
+
+    @GetMapping("/userBoard/myBoardDetail")
+    public String boardDetail(@RequestParam("page") int page, @RequestParam("num") int num,
+                              @RequestParam("total") int total, Model model, HttpSession session) throws Exception {
+        FreeBoardVo data = new FreeBoardVo();
+        MemberVo memberVo = new MemberVo();
+        Map<String, Object> map = new HashMap<>();
+        String userId = "";
+
+        try {
+            memberVo = (MemberVo) session.getAttribute("userInfo");
+
+            userId = memberVo.getUserId();
+
+            map.put("userId", userId);
+            map.put("num", num);
+
+            data = service.getMyBoardDetailData(map);
+
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+        model.addAttribute("data", data);
+        model.addAttribute("page", page);
+        model.addAttribute("num", num);
+        model.addAttribute("total", total);
+
+        logger.info(data.toString());
+
+        return "/free/userBoard/myBoardDetail";
     }
 
 }
