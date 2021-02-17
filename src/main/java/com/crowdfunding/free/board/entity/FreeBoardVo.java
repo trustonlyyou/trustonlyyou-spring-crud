@@ -9,7 +9,7 @@ public class FreeBoardVo {
     private String content;
     private Date regdate;
     private int viewCnt;
-    private String membershipTableUserId;
+    private String userId;
 
     public Integer getNum() {
         return num;
@@ -52,12 +52,12 @@ public class FreeBoardVo {
         this.viewCnt = viewCnt;
     }
 
-    public String getMembershipTableUserId() {
-        return membershipTableUserId;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setMembershipTableUserId(String membershipTableUserId) {
-        this.membershipTableUserId = membershipTableUserId;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class FreeBoardVo {
                 ", content='" + content + '\'' +
                 ", regdate=" + regdate +
                 ", viewCnt=" + viewCnt +
-                ", membershipTableUserId='" + membershipTableUserId + '\'' +
+                ", membershipTableUserId='" + userId + '\'' +
                 '}';
     }
 }

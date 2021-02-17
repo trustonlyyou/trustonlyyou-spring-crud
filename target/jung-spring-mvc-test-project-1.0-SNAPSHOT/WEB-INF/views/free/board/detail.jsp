@@ -28,14 +28,10 @@
                 </tr>
                 <tr>
                     <th>작성자</th>
-                    <td>${data.membershipTableUserId}</td>
+                    <td>${data.userId}</td>
                     <th>조회수</th>
                     <td>${data.viewCnt}</td>
                 </tr>
-<%--                <tr>--%>
-<%--                    <th>첨부파일</th>--%>
-<%--                    <td colspan="3"></td>--%>
-<%--                </tr>--%>
                 <tr>
                     <td colspan="4">
                         <div>
@@ -43,14 +39,6 @@
                             ${data.content}
                         </div>
                         <br>
-                        <div>
-                            <a href="http://www.newlecture.com/resource/spring2.zip">
-                                <b>
-                                    <u><font size="5" color="#dd8a00">예제 다운로드하기</font>
-                                    </u>
-                                </b>
-                            </a>
-                        </div>
                         <div>
                             <br>
                         </div>
@@ -75,12 +63,12 @@
             <tbody>
             <tr>
                 <th>다음글</th>
-                <td colspan="3"  class="text-align-left text-indent">다음글이 없습니다.</td>
+                <td colspan="3">다음글이 없습니다.</td>
             </tr>
 
             <tr>
                 <th>이전글</th>
-                <td colspan="3"  class="text-align-left text-indent"><a class="text-blue text-strong" href="">스프링 DI 예제 코드</a></td>
+                <td colspan="3"><a class="text-blue text-strong" href="">스프링 DI 예제 코드</a></td>
             </tr>
             </tbody>
         </table>

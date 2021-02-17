@@ -37,4 +37,12 @@ public class FreeBoardDao {
             throw e;
         }
     }
+
+    public void setWrite(FreeBoardVo freeBoardVo) throws Exception {
+        try {
+            sessionTemplate.insert("write", freeBoardVo);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

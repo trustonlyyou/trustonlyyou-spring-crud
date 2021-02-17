@@ -23,16 +23,16 @@ values
 -- function :: userPhoneFormat
 DROP function if exists userPhoneFormat;
 DELIMITER $$
-create function userPhoneFormat(phoneNumber char(20))
+create function userPhoneFormat(membershipUserId varchar(33))
 	returns char(20)
 begin
 	return
 		(select
 			concat_ws("-", substring(userPhone,1,3), REPLACE(substring(userphone, 4, 4), substring(userphone, 4, 4), '****'), substring(userphone, 8, 4))
 		from
-			membership_table
+			membershiptable
 		where
-			userphone = phoneNumber); -- userPhone = char(20)
+			userId = membershipUserId); -- userPhone = char(20)
 end $$
 DELIMITER ;
 

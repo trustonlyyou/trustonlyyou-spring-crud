@@ -26,11 +26,19 @@
     </beans:bean>
 
     <beans:bean id="loginInterceptor" class="com.crowdfunding.commons.util.LoginInterceptor"/>
+    <beans:bean id="boardInterceptor" class="com.crowdfunding.commons.util.BoardInterceptor"/>
 
     <interceptors>
         <interceptor>
             <mapping path="/membership/loginPost"/>
             <beans:ref bean="loginInterceptor"/>
+        </interceptor>
+    </interceptors>
+
+    <interceptors>
+        <interceptor>
+            <mapping path="/crowdfunding/free/board/write"/>
+            <beans:ref bean="boardInterceptor"/>
         </interceptor>
     </interceptors>
     

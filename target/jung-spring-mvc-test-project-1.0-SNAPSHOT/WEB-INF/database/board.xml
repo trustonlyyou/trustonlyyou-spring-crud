@@ -7,7 +7,7 @@
     <select id="freeBoardList" parameterType="com.crowdfunding.commons.util.Criteria" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
         <![CDATA[
             select
-                title, regdate, viewCnt, membershipTableUserId
+                title, regdate, viewCnt, userId
             from
                 freeboard
             where
@@ -33,7 +33,7 @@
     <select id="detailData" parameterType="int" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
         <![CDATA[
             select
-                title, regdate, content, viewCnt, membershipTableUserId
+                title, regdate, content, viewCnt, userId
             from
                 freeboard
             where
@@ -43,5 +43,11 @@
         ]]>
     </select>
 
+    <insert id="write" parameterType="com.crowdfunding.free.board.entity.FreeBoardVo">
+        insert into freeboard
+            (title, content, userId)
+        values
+            (#{title}, #{content}, #{userId});
 
+    </insert>
 </mapper>

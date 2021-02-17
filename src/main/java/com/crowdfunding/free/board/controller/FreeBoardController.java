@@ -3,16 +3,18 @@ package com.crowdfunding.free.board.controller;
 import com.crowdfunding.commons.util.Criteria;
 import com.crowdfunding.commons.util.PageMaker;
 import com.crowdfunding.free.board.entity.FreeBoardVo;
+import com.crowdfunding.free.board.repository.FreeBoardDao;
 import com.crowdfunding.free.board.service.FreeBoardService;
+import com.crowdfunding.member.entity.MemberVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,6 +64,43 @@ public class FreeBoardController {
         model.addAttribute("data", data);
 
         return "/free/board/detail";
+    }
+
+    @GetMapping("/board/write")
+    public String boardWrite(HttpSession session, RedirectAttributes redirectAttributes, Model model) throws Exception {
+
+        MemberVo memberVo = new MemberVo();
+
+        try {
+            memberVo = (MemberVo) session.getAttribute("userInfo");
+
+            if (memberVo == null) {
+                logger.error("No UserInfo");
+                redirectAttributes.addFlashAttribute("msg", "fail");
+                return "redirect:/membership/login";
+            }
+
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+
+        model.addAttribute("userId", memberVo.getUserId());
+
+        return "/free/board/write";
+    }
+
+    @PostMapping("/board/writePost")
+    public String boardWrite(@ModelAttribute FreeBoardVo boardVo, Model model, RedirectAttributes redirectAttributes) {
+
+        try {
+            service.writeBoard(boardVo);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+
+        return "redirect:/crowdfunding/free/board/listPage";
     }
 }
 

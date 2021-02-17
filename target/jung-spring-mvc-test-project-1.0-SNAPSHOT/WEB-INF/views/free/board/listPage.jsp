@@ -21,22 +21,28 @@
     </header>
 
     <main>
-        <div>
-            <h3>검색폼</h3>
-            <form>
-                <fieldset>
-                    <legend class="hidden">검색 필드</legend>
-                    <label class="hidden">검색분류</label>
-                    <select name="f">
-                        <option value="title">제목</option>
-                        <option value="writerId">작성자</option>
-                    </select>
-                    <label>검색어</label>
-                    <input type="text" name="search" value=""/>
-                    <input type="submit" value="검색" />
-                </fieldset>
-            </form>
-        </div>
+<%--        <div>--%>
+<%--            <h3>검색폼</h3>--%>
+<%--            <form>--%>
+<%--                <fieldset>--%>
+<%--                    <legend class="hidden">검색 필드</legend>--%>
+<%--                    <label class="hidden">검색분류</label>--%>
+<%--                    <select name="f">--%>
+<%--                        <option value="title">제목</option>--%>
+<%--                        <option value="writerId">작성자</option>--%>
+<%--                    </select>--%>
+<%--                    <label>검색어</label>--%>
+<%--                    <input type="text" name="search" value=""/>--%>
+<%--                    <input type="submit" value="검색" />--%>
+<%--                </fieldset>--%>
+<%--            </form>--%>
+<%--        </div>--%>
+
+        <nav>
+            <h2>
+                <a href="/">메인 화면</a>
+            </h2>
+        </nav>
 
         <div>
             <h3>자유게시판 목록</h3>
@@ -58,7 +64,7 @@
                         <td>${pageMaker.totalCount - (status.index + 1) + 1}</td>
 <%--                        <td>${status.index + 1}</td>&lt;%&ndash;  status.index 로 하면 0 부터 시작 , count 는 1 부터 시작    &ndash;%&gt;--%>
                         <td><a href="/crowdfunding/free/board/detail/?num=${pageMaker.totalCount - (status.index + 1) + 1}">${boardVo.title}</a></td>
-                        <td>${boardVo.membershipTableUserId}</td>
+                        <td>${boardVo.userId}</td>
                         <td>${boardVo.regdate}</td>
                         <td>${boardVo.viewCnt}</td>
                     </tr>
@@ -68,7 +74,7 @@
         </div>
 
         <div style="text-align: right">
-            <form action="" method="get">
+            <form action="/crowdfunding/free/board/write" method="get">
                 <input type="submit" value="글쓰기">
             </form>
         </div>

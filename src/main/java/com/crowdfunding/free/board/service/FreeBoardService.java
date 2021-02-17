@@ -37,4 +37,12 @@ public class FreeBoardService {
             throw e;
         }
     }
+
+    public void writeBoard(FreeBoardVo freeBoardVo) throws Exception {
+        try {
+            boardDao.setWrite(freeBoardVo);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }
