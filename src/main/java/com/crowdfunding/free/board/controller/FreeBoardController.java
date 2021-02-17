@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,4 +48,20 @@ public class FreeBoardController {
 
         return "/free/board/listPage";
     }
+
+    @GetMapping("/board/detail")
+    public String boardDetail(@RequestParam("num") int num, Model model) throws Exception {
+        FreeBoardVo data = new FreeBoardVo();
+
+        try {
+            data = service.getDetailData(num);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+        model.addAttribute("data", data);
+
+        return "/free/board/detail";
+    }
 }
+
