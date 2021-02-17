@@ -48,6 +48,40 @@
             (title, content, userId)
         values
             (#{title}, #{content}, #{userId});
-
     </insert>
+
+    <update id="upViewCnt" parameterType="int">
+        update
+            freeboard
+        set
+            viewCnt = viewCnt + 1
+        where
+            bno = #{index}
+    </update>
+
+    <select id="myBoardList" parameterType="Map" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
+        select
+            f.bno, m.userId, f.title, f.content, f.regdate, f.viewcnt
+        from
+            freeboard f
+        left join
+            membershiptable m
+        on
+            f.userId = m.userId
+        where
+            f.userId = #{userId}
+        order by
+            regdate desc
+        limit
+            #{pageStart}, #{perPageNum}
+    </select>
+
+    <select id="myBoardCountingData" parameterType="String" resultType="int">
+        select
+            count(bno)
+        from
+            freeboard
+        where
+            userId = #{userId}
+    </select>
 </mapper>

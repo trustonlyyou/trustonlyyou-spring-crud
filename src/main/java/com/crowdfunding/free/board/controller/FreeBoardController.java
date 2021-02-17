@@ -28,12 +28,14 @@ public class FreeBoardController {
     FreeBoardService service;
 
     @GetMapping("/board/listPage")
-    public String listPage(Model model, Criteria criteria) throws Exception {
+    public String listPage(@RequestParam(defaultValue = "1") int page, Model model, Criteria criteria) throws Exception {
         List<FreeBoardVo> list = new ArrayList<>();
         PageMaker pageMaker = new PageMaker();
         int countingData = 0;
 
+
         try {
+
             list = service.getBoardList(criteria);
             countingData = service.getCountingData(criteria);
 
@@ -52,16 +54,23 @@ public class FreeBoardController {
     }
 
     @GetMapping("/board/detail")
-    public String boardDetail(@RequestParam("num") int num, Model model) throws Exception {
+    public String boardDetail(@RequestParam("page") int page, @RequestParam("num") int num,
+                              @RequestParam("total") int total, Model model) throws Exception {
         FreeBoardVo data = new FreeBoardVo();
 
         try {
+            service.updateViewCnt(num);
             data = service.getDetailData(num);
         } catch (Exception e) {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
         model.addAttribute("data", data);
+        model.addAttribute("page", page);
+        model.addAttribute("num", num);
+        model.addAttribute("total", total);
+
+        logger.info(data.toString());
 
         return "/free/board/detail";
     }
@@ -76,7 +85,7 @@ public class FreeBoardController {
 
             if (memberVo == null) {
                 logger.error("No UserInfo");
-                redirectAttributes.addFlashAttribute("msg", "fail");
+                redirectAttributes.addFlashAttribute("msg", "board_login");
                 return "redirect:/membership/login";
             }
 

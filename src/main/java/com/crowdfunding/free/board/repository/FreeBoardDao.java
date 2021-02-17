@@ -45,4 +45,12 @@ public class FreeBoardDao {
             throw e;
         }
     }
+
+    public void updateViewCnt(int index) throws Exception {
+        try {
+            sessionTemplate.update("upViewCnt", index);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

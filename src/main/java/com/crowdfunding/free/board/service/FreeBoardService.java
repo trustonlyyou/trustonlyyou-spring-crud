@@ -45,4 +45,12 @@ public class FreeBoardService {
             throw e;
         }
     }
+
+    public void updateViewCnt(int index) throws Exception {
+        try {
+            boardDao.updateViewCnt(index);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

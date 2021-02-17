@@ -42,6 +42,9 @@
             <h2>
                 <a href="/">메인 화면</a>
             </h2>
+            <h2>
+                <a href="/crowdfunding/free/userBoard/listPage">나의 게시글 보기</a>
+            </h2>
         </nav>
 
         <div>
@@ -61,9 +64,11 @@
                 <%--  전체 레코드 수 - ( (현재 페이지 번호 - 1) * 한 페이지당 보여지는 레코드 수 + 현재 게시물 출력 순서 )--%>
                 <c:forEach items="${list}" var="boardVo" varStatus="status">
                     <tr>
-                        <td>${pageMaker.totalCount - (status.index + 1) + 1}</td>
-<%--                        <td>${status.index + 1}</td>&lt;%&ndash;  status.index 로 하면 0 부터 시작 , count 는 1 부터 시작    &ndash;%&gt;--%>
-                        <td><a href="/crowdfunding/free/board/detail/?num=${pageMaker.totalCount - (status.index + 1) + 1}">${boardVo.title}</a></td>
+                        <%--          게시물 번호 매기기             --%>
+                        <%-- (총 게시물 개수 - loop 의 index 값)  - ((현재 페이지 - 1) * 화면 당 보여지는 리스트 수) --%>
+                        <td>${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}</td>
+                        <td><a href="/crowdfunding/free/board/detail/?page=${pageMaker.criteria.page}&num=${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}&total=${pageMaker.totalCount}">${boardVo.title}</a></td>
+<%--                        <td><a href="/crowdfunding/free/board/detail${pageMaker.makeQuery(pageMaker.criteria.page)}&num=${pageMaker.totalCount - (status.index + 1) + 1}">${boardVo.title}</a></td>--%>
                         <td>${boardVo.userId}</td>
                         <td>${boardVo.regdate}</td>
                         <td>${boardVo.viewCnt}</td>
@@ -83,6 +88,7 @@
             <%--     prev       --%>
             <c:if test="${pageMaker.prev}">
                 <a href="listPage?page=${pageMaker.startPage - 1}" class="w3-button">&laquo;</a>
+<%--                <a href="listPage${pageMaker.makeQuery(pageMaker.startPage - 1)}" class="w3-button">&laquo;</a>--%>
             </c:if>
             <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="idx">
                 <c:choose>
@@ -91,15 +97,16 @@
                     </c:when>
                     <c:when test="${pageMaker.criteria.page != idx}">
                         <a href="listPage?page=${idx}" class="w3-button">${idx}</a>
+<%--                        <a href="listPage?page${pageMaker.makeQuery(idx)}" class="w3-button">${idx}</a>--%>
                     </c:when>
                 </c:choose>
             </c:forEach>
 
             <c:if test="${pageMaker.next && pageMaker.endPage > 0}">
                 <a href="listPage?page=${pageMaker.endPage +1}">&raquo;</a>
+<%--                <a href="listPage${pageMaker.makeQuery(pageMaker.endPage + 1)}">&raquo;</a>--%>
             </c:if>
         </div>
-
     </main>
 </body>
 </html>

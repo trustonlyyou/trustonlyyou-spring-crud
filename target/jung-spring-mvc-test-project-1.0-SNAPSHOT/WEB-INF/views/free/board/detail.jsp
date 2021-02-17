@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 렁환이
@@ -54,7 +55,9 @@
 
     <div style="text-align: right;">
         <h2>
-            <a class="btn btn-list" href="list.html">목록</a>
+            <a class="btn btn-list" href="/crowdfunding/free/board/listPage?page=${page}">목록</a>
+<%--            http://localhost:8080/crowdfunding/free/board/listPage?page=2--%>
+<%--            http://localhost:8080/crowdfunding/free/board/detail/?num=117--%>
         </h2>
     </div>
 
@@ -62,13 +65,21 @@
         <table>
             <tbody>
             <tr>
-                <th>다음글</th>
-                <td colspan="3">다음글이 없습니다.</td>
+                <c:if test="${total == num}">
+                    <th>다음 글이 없습니다.</th>
+                </c:if>
+                <c:if test="${total != num}">
+                    <th><a href="/crowdfunding/free/board/detail/?page=${page}&num=${num + 1}&total=${total}">다음글</a></th>
+                </c:if>
             </tr>
 
             <tr>
-                <th>이전글</th>
-                <td colspan="3"><a class="text-blue text-strong" href="">스프링 DI 예제 코드</a></td>
+                <c:if test="${num == 1}">
+                    <th>이전 글이 없습니다.</th>
+                </c:if>
+                <c:if test="${num != 1}">
+                    <th><a href="/crowdfunding/free/board/detail?page=${page}&num=${num - 1}&total=${total}">이전글</a></th>
+                </c:if>
             </tr>
             </tbody>
         </table>

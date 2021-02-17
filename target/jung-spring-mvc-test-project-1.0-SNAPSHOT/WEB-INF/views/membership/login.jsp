@@ -46,6 +46,10 @@
     if (message === 'fail') {
         alert('아이디와 비밀번호를 확인해주세요.');
     }
+
+    if (message === 'board_login') {
+        alert('로그인 해주세요.')
+    }
 </script>
 
 </html>
