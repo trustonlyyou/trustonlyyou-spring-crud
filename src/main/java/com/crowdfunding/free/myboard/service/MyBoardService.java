@@ -38,4 +38,12 @@ public class MyBoardService {
             throw e;
         }
      }
+
+    public void myBoardDataModify(Map<String, Object> map) throws Exception {
+        try {
+            boardDao.myBoardDataModify(map);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

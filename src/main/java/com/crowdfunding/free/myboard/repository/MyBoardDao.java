@@ -40,5 +40,12 @@ public class MyBoardDao {
         }
     }
 
+    public void myBoardDataModify(Map<String, Object> map) throws Exception {
+        try {
+            sessionTemplate.update("myBoardDataModify", map);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 
 }

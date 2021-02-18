@@ -53,6 +53,7 @@
         </fieldset>
     </div>
 
+
     <div style="text-align: right;">
         <h2>
             <a class="btn btn-list" href="/crowdfunding/free/userBoard/myBoardList">목록</a>

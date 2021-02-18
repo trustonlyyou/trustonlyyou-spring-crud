@@ -103,4 +103,14 @@
                 regdate desc
         ]]>
     </select>
+
+    <update id="myBoardDataModify" parameterType="Map">
+        update
+            freeboard
+        set
+            title = #{title},
+            content = #{content}
+        where
+            bno = #{num}
+    </update>
 </mapper>

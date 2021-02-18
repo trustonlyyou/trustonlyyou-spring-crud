@@ -109,4 +109,10 @@
         </div>
     </main>
 </body>
+<script>
+    var msg = '${msg}';
+    if (msg === 'SUCCESS') {
+        alert("수정 되었습니다.");
+    }
+</script>
 </html>

@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -88,4 +90,61 @@ public class MyBoardController {
         return "/free/userBoard/myBoardDetail";
     }
 
+    @GetMapping("/userBoard/myBoardModify")
+    public String modifyPage(@RequestParam("num") int num, Model model, HttpSession session) throws Exception {
+        FreeBoardVo data = new FreeBoardVo();
+        MemberVo memberVo = new MemberVo();
+        Map<String, Object> map = new HashMap<>();
+        String userId = "";
+
+        try {
+            memberVo = (MemberVo) session.getAttribute("userInfo");
+
+            userId = memberVo.getUserId();
+
+            map.put("userId", userId);
+            map.put("num", num);
+
+            data = service.getMyBoardDetailData(map);
+
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+
+        model.addAttribute("userId", userId);
+        model.addAttribute("data", data);
+        model.addAttribute("num", num);
+
+        return "/free/userBoard/myBoardModify";
+    }
+
+    @PostMapping("/userBoard/myBoardModify")
+    public String modifyPost(HttpServletRequest request, Model model) throws Exception {
+
+        Map<String, Object> map = new HashMap<>();
+        String title = "";
+        String content = "";
+        int num = 0;
+
+        try {
+            title = request.getParameter("title");
+            content = request.getParameter("content");
+            num = Integer.parseInt(request.getParameter("num"));
+
+            map.put("title", title);
+            map.put("content", content);
+            map.put("num", num);
+
+            service.myBoardDataModify(map);
+
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+
+        model.addAttribute("msg", "SUCCESS");
+
+        return "redirect:/crowdfunding/free/board/listPage";
+        // TODO: 2021-02-18 myBoardList 게시글이 다르다. 위아래가 어떻게 처리할래? || 게시글 삭제하기
+    }
 }
