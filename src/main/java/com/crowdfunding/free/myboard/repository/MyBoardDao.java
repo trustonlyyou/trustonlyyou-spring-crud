@@ -48,4 +48,12 @@ public class MyBoardDao {
         }
     }
 
+    public void myBoardDataDelete(int num) throws Exception {
+        try {
+            sessionTemplate.delete("myBoardDataDelete", num);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
 }

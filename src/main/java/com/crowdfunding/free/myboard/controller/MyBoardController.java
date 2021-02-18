@@ -37,17 +37,32 @@ public class MyBoardController {
         List<FreeBoardVo> list = new ArrayList<>();
         MemberVo memberVo = new MemberVo();
         PageMaker pageMaker = new PageMaker();
+
         int countingData = 0;
+        String userId = "";
 
-        memberVo = (MemberVo) session.getAttribute("userInfo");
-        String userId = memberVo.getUserId();
+        try {
 
-        map.put("userId", userId);
-        map.put("pageStart", criteria.getPageStart());
-        map.put("perPageNum", criteria.getPerPageNum());
+            memberVo = (MemberVo) session.getAttribute("userInfo");
+            userId = memberVo.getUserId();
 
-        list = service.getMyBoardList(map);
-        countingData = service.getMyBoardCountingData(userId);
+            logger.info("userId :: '{}' ", userId);
+
+            if (userId == null || "".equals(userId)) {
+                return "redirect:/membership/login";
+            }
+
+            map.put("userId", userId);
+            map.put("pageStart", criteria.getPageStart());
+            map.put("perPageNum", criteria.getPerPageNum());
+
+            list = service.getMyBoardList(map);
+            countingData = service.getMyBoardCountingData(userId);
+
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
 
         pageMaker.setCriteria(criteria);
         pageMaker.setTotalCount(countingData);
@@ -146,5 +161,22 @@ public class MyBoardController {
 
         return "redirect:/crowdfunding/free/board/listPage";
         // TODO: 2021-02-18 myBoardList 게시글이 다르다. 위아래가 어떻게 처리할래? || 게시글 삭제하기
+    }
+
+    @PostMapping("/userBoard/myBoardDelet")
+    public String deletePost(HttpServletRequest request) throws Exception {
+
+        int numId = 0;
+
+        try {
+            numId = Integer.parseInt(request.getParameter("num"));
+
+            service.myBoardDataDelete(numId);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+
+        return "redirect:/crowdfunding/free/board/listPage";
     }
 }

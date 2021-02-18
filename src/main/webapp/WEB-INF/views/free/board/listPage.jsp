@@ -67,8 +67,9 @@
                         <%--          게시물 번호 매기기             --%>
                         <%-- (총 게시물 개수 - loop 의 index 값)  - ((현재 페이지 - 1) * 화면 당 보여지는 리스트 수) --%>
                         <td>${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}</td>
-                        <td><a href="/crowdfunding/free/board/detail/?page=${pageMaker.criteria.page}&num=${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}&total=${pageMaker.totalCount}">${boardVo.title}</a></td>
-<%--                        <td><a href="/crowdfunding/free/board/detail${pageMaker.makeQuery(pageMaker.criteria.page)}&num=${pageMaker.totalCount - (status.index + 1) + 1}">${boardVo.title}</a></td>--%>
+                        <td><a href="/crowdfunding/free/board/detail/?page=${pageMaker.criteria.page}&num=${boardVo.num}&total=${pageMaker.totalCount}">${boardVo.title}</a></td>
+<%--                        <td><a href="/crowdfunding/free/board/detail/?page=${pageMaker.criteria.page}&num=${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}&total=${pageMaker.totalCount}">${boardVo.title}</a></td>--%>
+                            <%--  <td><a href="/crowdfunding/free/board/detail${pageMaker.makeQuery(pageMaker.criteria.page)}&num=${pageMaker.totalCount - (status.index + 1) + 1}">${boardVo.title}</a></td>--%>
                         <td>${boardVo.userId}</td>
                         <td>${boardVo.regdate}</td>
                         <td>${boardVo.viewCnt}</td>

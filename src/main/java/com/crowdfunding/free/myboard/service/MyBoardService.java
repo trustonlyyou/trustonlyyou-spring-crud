@@ -46,4 +46,12 @@ public class MyBoardService {
             throw e;
         }
     }
+
+    public void myBoardDataDelete(int num) throws Exception {
+        try {
+            boardDao.myBoardDataDelete(num);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

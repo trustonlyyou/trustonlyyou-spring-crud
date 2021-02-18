@@ -49,7 +49,7 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>번호</th>
+<%--                        <th>번호</th>--%>
                         <th>제목</th>
                         <th>작성자</th>
                         <th>작성일</th>
@@ -63,15 +63,20 @@
                         <tr>
                             <%--          게시물 번호 매기기             --%>
                             <%-- (총 게시물 개수 - loop 의 index 값)  - ((현재 페이지 - 1) * 화면 당 보여지는 리스트 수) --%>
-                            <td>${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}</td>
-                            <td><a href="/crowdfunding/free/userBoard/myBoardDetail?page=${pageMaker.criteria.page}&num=${list.get((pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum) - 1).num}&total=${pageMaker.totalCount}">${boardVo.title}</a></td>
+<%--                            <td>${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}</td>--%>
+                            <td><a href="/crowdfunding/free/userBoard/myBoardDetail?page=${pageMaker.criteria.page}&num=${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}&total=${pageMaker.totalCount}">${boardVo.title}</a></td>
+                            <%--                            <td><a href="/crowdfunding/free/userBoard/myBoardDetail?page=${pageMaker.criteria.page}&num=${list.get((pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum) - 1).num}&total=${pageMaker.totalCount}">${boardVo.title}</a></td>--%>
+
                             <td>${boardVo.userId}</td>
                             <td>${boardVo.regdate}</td>
                             <td>${boardVo.viewCnt}</td>
-                            <td><a href="/crowdfunding/free/userBoard/myBoardModify?page=${pageMaker.criteria.page}&num=${list.get((pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum) - 1).num}&total=${pageMaker.totalCount}">수정</a></td>
+                            <td><a href="/crowdfunding/free/userBoard/myBoardModify?page=${pageMaker.criteria.page}&num=${(pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum)}&total=${pageMaker.totalCount}">수정</a></td>
+<%--                            <td><a href="/crowdfunding/free/userBoard/myBoardModify?page=${pageMaker.criteria.page}&num=${list.get((pageMaker.totalCount - status.index) - ((pageMaker.criteria.page - 1) * pageMaker.criteria.perPageNum) - 1).num}&total=${pageMaker.totalCount}">수정</a></td>--%>
+
                             <td>
                                 <form action="" method="post">
-                                    <input type="submit" value="게시글 삭제">
+                                <td><input type="text" name="autoId" value="${boardVo.num}"></td>
+                                <input type="submit" value="게시글 삭제">
                                 </form>
                             </td>
                         </tr>
@@ -98,14 +103,16 @@
                             <b>${idx}</b>
                         </c:when>
                         <c:when test="${pageMaker.criteria.page != idx}">
-                            <a href="listPage?page=${idx}" class="w3-button">${idx}</a>
+<%--                            <a href="listPage?page=${idx}" class="w3-button">${idx}</a>--%>
+                            <a href="/crowdfunding/free/userBoard/myBoardList?page=${idx}">${idx}</a>
     <%--                        <a href="listPage?page${pageMaker.makeQuery(idx)}" class="w3-button">${idx}</a>--%>
                         </c:when>
                     </c:choose>
                 </c:forEach>
 
                 <c:if test="${pageMaker.next && pageMaker.endPage > 0}">
-                    <a href="listPage?page=${pageMaker.endPage +1}">&raquo;</a>
+<%--                    <a href="listPage?page=${pageMaker.endPage +1}">&raquo;</a>--%>
+                    <a href="/crowdfunding/free/userBoard/myBoardList?page=${pageMaker.endPage +1}">&raquo;</a>
     <%--                <a href="listPage${pageMaker.makeQuery(pageMaker.endPage + 1)}">&raquo;</a>--%>
                 </c:if>
             </div>

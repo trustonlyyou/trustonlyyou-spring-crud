@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class FreeBoardVo {
+
     private int num;
     private String title;
     private String content;

@@ -7,7 +7,7 @@
     <select id="freeBoardList" parameterType="com.crowdfunding.commons.util.Criteria" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
         <![CDATA[
             select
-                title, regdate, viewCnt, userId
+                bno as num, title, regdate, viewCnt, userId
             from
                 freeboard
             where
@@ -113,4 +113,11 @@
         where
             bno = #{num}
     </update>
+
+    <delete id="myBoardDataDelete" parameterType="int">
+        delete from
+            freeboard
+        where
+            bno = ${num}
+    </delete>
 </mapper>

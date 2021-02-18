@@ -29,6 +29,7 @@ public class FreeBoardController {
 
     @GetMapping("/board/listPage")
     public String listPage(@RequestParam(defaultValue = "1") int page, Model model, Criteria criteria) throws Exception {
+
         List<FreeBoardVo> list = new ArrayList<>();
         PageMaker pageMaker = new PageMaker();
         int countingData = 0;
@@ -56,6 +57,7 @@ public class FreeBoardController {
     @GetMapping("/board/detail")
     public String boardDetail(@RequestParam("page") int page, @RequestParam("num") int num,
                               @RequestParam("total") int total, Model model) throws Exception {
+
         FreeBoardVo data = new FreeBoardVo();
 
         try {
