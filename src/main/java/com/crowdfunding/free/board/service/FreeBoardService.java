@@ -30,6 +30,14 @@ public class FreeBoardService {
         }
     }
 
+    public int getMaxNum() throws Exception {
+        try {
+            return boardDao.getMaxNum();
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
     public FreeBoardVo getDetailData(int numCalc) throws Exception {
         try {
             return boardDao.getDetailData(numCalc);

@@ -19,7 +19,9 @@ public class MyPageController {
 
     @GetMapping("/membership/mypage")
     public String myPage(HttpSession session, Model model) throws Exception {
+
         MemberVo memberVo = new MemberVo();
+
         try {
             memberVo = (MemberVo) session.getAttribute("userInfo");
         } catch (Exception e) {

@@ -61,9 +61,10 @@ public class FindIdAndPasswordController {
             return "redirect:/membership/findIdResult";
         }
 
+        logger.info("Find ID :: '{}'", userId);
         redirectAttributes.addFlashAttribute("result", userId);
 
-        return "/membership/findIdResult";
+        return "redirect:/membership/findIdResult";
     }
 
     @GetMapping("/findIdResult")
@@ -151,6 +152,7 @@ public class FindIdAndPasswordController {
             userInfo.put("newUserPassword", newUserPasswordEncryption);
 
             service.changeUserPassword(userInfo);
+
 
         } catch (Exception e) {
             logger.error(e.getMessage());

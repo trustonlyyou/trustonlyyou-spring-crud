@@ -15,17 +15,11 @@
     <div>
         <form:form modelAttribute="userInfo">
             회원 이름 : <form:input path="userName" readonly="true"/>
-            <span>
-                <form:button>이름 수정</form:button>
-            </span>
         </form:form>
     </div>
     <div>
         <form:form modelAttribute="userInfo">
             아이디 : <form:input path="userId" readonly="true"/>
-            <span>
-                <form:button>아이디 수정</form:button>
-            </span>
         </form:form>
     </div>
     <div>
@@ -39,17 +33,11 @@
     <div>
         <form:form modelAttribute="userInfo">
             핸드폰 번호 : <form:input path="userPhone" readonly="true"/>
-            <span>
-                <form:button>핸드폰 번호 수정</form:button>
-            </span>
         </form:form>
     </div>
     <div>
         <form:form modelAttribute="userInfo">
             배송지 : <form:input path="userAddress" readonly="true"/>
-            <span>
-                <form:button>주소 수정</form:button>
-            </span>
         </form:form>
     </div>
 

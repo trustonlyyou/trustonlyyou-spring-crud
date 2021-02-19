@@ -47,13 +47,17 @@ public class LoginController {
         }
 
         if (userInfo == null) {
-            logger.error("No userInfo");
+            logger.info("No userInfo");
             redirectAttributes.addFlashAttribute("msg", "fail");
+
             return "redirect:/membership/login";
         }
 
         logger.info(userInfo.toString());
+
         session.setAttribute("userInfo", userInfo);
+        // 세션에 회원 정보 담는다. 보안 유지로 데이터는 formatting 했다.
+
         return "forward:/";
     }
 }

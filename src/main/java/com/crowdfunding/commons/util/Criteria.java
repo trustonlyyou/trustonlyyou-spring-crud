@@ -21,7 +21,7 @@ public class Criteria {
 
     // validation check
     public void setPerPageNum(int perPageNum) {
-        if (perPageNum <= 0 || perPageNum > 100) {
+        if (perPageNum <= 0 || perPageNum > 11) {
             this.perPageNum = 10;
             return;
         }

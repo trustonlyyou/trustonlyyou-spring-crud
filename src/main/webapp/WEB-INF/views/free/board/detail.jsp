@@ -62,27 +62,28 @@
     </div>
 
     <div>
-        <table>
-            <tbody>
-            <tr>
-                <c:if test="${total == num}">
-                    <th>다음 글이 없습니다.</th>
-                </c:if>
-                <c:if test="${total != num}">
-                    <th><a href="/crowdfunding/free/board/detail/?page=${page}&num=${num + 1}&total=${total}">다음글</a></th>
-                </c:if>
-            </tr>
+    <%--   table의 num 값으로 다음, 이전 페이지를 구성 했지만 데이터 손실 되었을 때 중간에 값이 뜨기 때문에 이슈가 발생한다.     --%>
+<%--        <table>--%>
+<%--            <tbody>--%>
+<%--            <tr>--%>
+<%--                <c:if test="${maxNum == num}">--%>
+<%--                    <th>다음 글이 없습니다.</th>--%>
+<%--                </c:if>--%>
+<%--                <c:if test="${maxNum != num}">--%>
+<%--                    <th><a href="/crowdfunding/free/board/detail/?page=${page}&num=${num + 1}">다음글</a></th>--%>
+<%--               </c:if>--%>
+<%--            </tr>--%>
 
-            <tr>
-                <c:if test="${num == 1}">
-                    <th>이전 글이 없습니다.</th>
-                </c:if>
-                <c:if test="${num != 1}">
-                    <th><a href="/crowdfunding/free/board/detail?page=${page}&num=${num - 1}&total=${total}">이전글</a></th>
-                </c:if>
-            </tr>
-            </tbody>
-        </table>
+<%--            <tr>--%>
+<%--                <c:if test="${num == 1}">--%>
+<%--                    <th>이전 글이 없습니다.</th>--%>
+<%--                </c:if>--%>
+<%--                <c:if test="${num != 1}">--%>
+<%--                    <th><a href="/crowdfunding/free/board/detail?page=${page}&num=${num - 1}">이전글</a></th>--%>
+<%--                </c:if>--%>
+<%--            </tr>--%>
+<%--            </tbody>--%>
+<%--        </table>--%>
     </div>
 </main>
 </body>

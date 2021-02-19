@@ -29,7 +29,7 @@ public class LogoutController {
             e.printStackTrace();
         }
 
-        return "index";
+        return "redirect:/";
     }
 
 }

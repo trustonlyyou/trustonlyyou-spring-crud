@@ -30,6 +30,14 @@ public class FreeBoardDao {
         }
     }
 
+    public int getMaxNum() throws Exception {
+        try {
+            return sessionTemplate.selectOne("maxNum");
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
     public FreeBoardVo getDetailData(int numCalc) throws Exception {
         try {
             return sessionTemplate.selectOne("detailData", numCalc);

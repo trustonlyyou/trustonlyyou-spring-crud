@@ -20,7 +20,7 @@ public class BoardInterceptor extends HandlerInterceptorAdapter {
 
         if (httpSession.getAttribute("userInfo") == null) {
             logger.error("No User Information");
-            response.sendRedirect("/");
+            response.sendRedirect("/membership/login");
             return false;
         }
         return true;

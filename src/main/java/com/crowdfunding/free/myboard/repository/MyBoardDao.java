@@ -48,9 +48,9 @@ public class MyBoardDao {
         }
     }
 
-    public void myBoardDataDelete(int num) throws Exception {
+    public void myBoardDataDelete(int numId) throws Exception {
         try {
-            sessionTemplate.delete("myBoardDataDelete", num);
+            sessionTemplate.delete("myBoardDataDelete", numId);
         } catch (Exception e) {
             throw e;
         }

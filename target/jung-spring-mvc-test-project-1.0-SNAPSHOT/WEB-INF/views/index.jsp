@@ -20,7 +20,6 @@
                       <li>로그인 해주세요.</li>
                       <li><a href="/membership/login">로그인</a></li>
                       <li><a href="/membership/join">회원가입</a></li>
-                      <li><a href="/membership/joinTest">javascript test Page</a></li>
                   </c:if>
 
                   <c:if test="${sessionScope.userInfo != null}">
@@ -39,6 +38,7 @@
           <nav>
               <ul>
                   <li><a href="/crowdfunding/free/board/listPage">자유게시판</a></li>
+                  <li><a href="/after">감상평...</a> </li>
               </ul>
           </nav>
       </main>

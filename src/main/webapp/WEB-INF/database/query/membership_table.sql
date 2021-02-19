@@ -1,4 +1,4 @@
-create table membership_table (
+create table membershiptable (
     userName char(20) not null,
     userId varchar(40) not null primary key,
     userPassword varchar(100) not null,
@@ -12,7 +12,7 @@ create table membership_table (
     regdate timestamp default CURRENT_TIMESTAMP
 );
 
--- insert test query
+-- join
 insert into membership_table
 (userName, userId, userPassword, userBirth, userPhone, userEmail, userPostcode, userAddress, userDetailAddress, userExtraAddress)
 values
@@ -55,4 +55,45 @@ begin
 end $$
 DELIMITER ;
 
--- select query
+-- Login
+select
+	userName, userId, replace(userPassword, userPassword, '****') as userPassword, userPhoneFormat(#{userId}) as userPhone, userEmail, userPostcode, userAddressFormat(#{userId}) as userAddress, userDetailAddress, userExtraAddress
+from
+	membershiptable
+where
+	1=1
+        and
+    userId = #{userId}
+        and
+    userPassword = #{userPassword}
+
+-- Find ID
+select
+    userId
+from
+    membershiptable
+where
+    1=1
+    and userName = #{userName}
+    and userPhone = #{userPhone};
+
+
+-- findPassword
+
+select
+    count(*) -- 해당 정보가 있는지 카운팅 한다.
+from
+    membershiptable
+where
+    1=1
+    and userName=#{userName}
+    and userId=#{userId}
+    and userPhone=#{userPhone}
+
+-- modify Password
+update
+    membershiptable
+set
+    userPassword=#{newUserPassword}
+where
+    userPhone=#{userPhone}

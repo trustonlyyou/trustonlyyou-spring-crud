@@ -160,16 +160,17 @@ public class MyBoardController {
         model.addAttribute("msg", "SUCCESS");
 
         return "redirect:/crowdfunding/free/board/listPage";
-        // TODO: 2021-02-18 myBoardList 게시글이 다르다. 위아래가 어떻게 처리할래? || 게시글 삭제하기
     }
 
-    @PostMapping("/userBoard/myBoardDelet")
+    @PostMapping("/userBoard/myBoardDelete")
     public String deletePost(HttpServletRequest request) throws Exception {
 
         int numId = 0;
 
         try {
-            numId = Integer.parseInt(request.getParameter("num"));
+            numId = Integer.parseInt(request.getParameter("autoId"));
+
+            logger.info("numId :: '{}'", numId);
 
             service.myBoardDataDelete(numId);
         } catch (Exception e) {

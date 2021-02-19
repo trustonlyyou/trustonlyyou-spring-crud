@@ -31,6 +31,7 @@ public class JoinController {
     public String joinPost(@ModelAttribute MemberVo memberVo) throws Exception {
 
         String encryptionPassword = EncryptionSHA256.encrypt(memberVo.getUserPassword());
+        // SHA256(해쉬 알고리즘 이용) :: 복호화 불가능. 단방향. 속도가 빠름
 
         memberVo.setUserPassword(encryptionPassword);
         logger.info("New Client Join :: '{}'" , memberVo.getUserId());
@@ -43,24 +44,6 @@ public class JoinController {
         }
 
         return "redirect:/membership/joinResult";
-//        try {
-//
-//            logger.info(memberVo.toString());
-//
-//            if (memberVo == null) {
-//                logger.error("MemberVo values :: {}", memberVo.toString());
-//                model.addAttribute("chk", false);
-//                return "/membership/join";
-//            } else {
-//                String encryptionPassword = EncryptionSHA256.encrypt(memberVo.getUserPassword());
-//                memberVo.setUserPassword(encryptionPassword);
-//                logger.info(memberVo.toString());
-//                service.joinMembershipService(memberVo);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            logger.error(e.getMessage());
-//        }
     }
 
     @GetMapping("/joinResult")
@@ -68,9 +51,3 @@ public class JoinController {
         return "membership/join_result";
     }
 }
-
-// TODO: 2021-02-04 get - post - redirect 시에 void 로 처리
-
-
-// 네스프레소 일리캡슐
-// 네스프레소 스타벅스 캡슐

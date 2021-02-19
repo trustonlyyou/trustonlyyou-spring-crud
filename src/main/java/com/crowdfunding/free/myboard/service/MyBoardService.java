@@ -47,9 +47,9 @@ public class MyBoardService {
         }
     }
 
-    public void myBoardDataDelete(int num) throws Exception {
+    public void myBoardDataDelete(int numId) throws Exception {
         try {
-            boardDao.myBoardDataDelete(num);
+            boardDao.myBoardDataDelete(numId);
         } catch (Exception e) {
             throw e;
         }

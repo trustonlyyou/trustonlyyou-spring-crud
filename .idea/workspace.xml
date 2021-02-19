@@ -7,18 +7,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a72d687a-77b4-446f-9a75-6397bac13b24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/query/Board.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/after.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/commons/util/BoardInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/commons/util/BoardInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/commons/util/Criteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/commons/util/Criteria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/controller/FreeBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/controller/FreeBoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/entity/FreeBoardVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/entity/FreeBoardVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/repository/FreeBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/repository/FreeBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/service/FreeBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/board/service/FreeBoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/myboard/controller/MyBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/myboard/controller/MyBoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/myboard/repository/MyBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/myboard/repository/MyBoardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/myboard/service/MyBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/free/myboard/service/MyBoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/JoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crowdfunding/member/controller/LogoutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/query/membership_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/query/membership_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/board/detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/board/listPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/board/listPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/userBoard/myBoardDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/userBoard/myBoardDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/userBoard/myBoardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/free/userBoard/myBoardList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/myPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/membership/myPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/commons/util/BoardInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/commons/util/BoardInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/commons/util/Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/commons/util/Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/board/controller/FreeBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/board/controller/FreeBoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/board/repository/FreeBoardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/board/repository/FreeBoardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/board/service/FreeBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/board/service/FreeBoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/myboard/controller/MyBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/myboard/controller/MyBoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/myboard/repository/MyBoardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/myboard/repository/MyBoardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/myboard/service/MyBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/free/myboard/service/MyBoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/JoinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/JoinController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/crowdfunding/member/controller/LogoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/commons/util/BoardInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/commons/util/BoardInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/commons/util/Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/commons/util/Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/board/controller/FreeBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/board/controller/FreeBoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/board/repository/FreeBoardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/board/repository/FreeBoardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/board/service/FreeBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/board/service/FreeBoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/myboard/controller/MyBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/myboard/controller/MyBoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/myboard/repository/MyBoardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/myboard/repository/MyBoardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/myboard/service/MyBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/free/myboard/service/MyBoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/JoinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/JoinController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/classes/com/crowdfunding/member/controller/LogoutController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/board.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/board.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/mapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/query/membership_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/database/query/membership_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/board/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/board/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/board/listPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/board/listPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/userBoard/myBoardDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/userBoard/myBoardDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/userBoard/myBoardList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/free/userBoard/myBoardList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/myPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/jung-spring-mvc-test-project-1.0-SNAPSHOT/WEB-INF/views/membership/myPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,11 +254,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -258,6 +298,8 @@
       <workItem from="1613562126031" duration="210000" />
       <workItem from="1613562451166" duration="1965000" />
       <workItem from="1613564514127" duration="27201000" />
+      <workItem from="1613647884564" duration="4293000" />
+      <workItem from="1613652244484" duration="34000" />
     </task>
     <task id="LOCAL-00001" summary="Desktop Clone Test">
       <created>1612629744325</created>
@@ -353,38 +395,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1008" height="427" key="GridCell.Tab.-1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610820411879" />
-    <state width="1630" height="95" key="GridCell.Tab.0.bottom" timestamp="1613640551741">
+    <state width="1465" height="364" key="GridCell.Tab.0.bottom" timestamp="1613652185058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551741" />
-    <state width="1630" height="95" key="GridCell.Tab.0.center" timestamp="1613640551740">
+    <state width="1465" height="364" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185058" />
+    <state width="1465" height="364" key="GridCell.Tab.0.center" timestamp="1613652185058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551740" />
-    <state width="1630" height="95" key="GridCell.Tab.0.left" timestamp="1613640551740">
+    <state width="1465" height="364" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185058" />
+    <state width="1465" height="364" key="GridCell.Tab.0.left" timestamp="1613652185057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551740" />
-    <state width="1630" height="95" key="GridCell.Tab.0.right" timestamp="1613640551740">
+    <state width="1465" height="364" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185057" />
+    <state width="1465" height="364" key="GridCell.Tab.0.right" timestamp="1613652185058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551740" />
-    <state width="1630" height="95" key="GridCell.Tab.1.bottom" timestamp="1613640551603">
+    <state width="1465" height="364" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185058" />
+    <state width="1465" height="364" key="GridCell.Tab.1.bottom" timestamp="1613652185059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551603" />
-    <state width="1630" height="95" key="GridCell.Tab.1.center" timestamp="1613640551603">
+    <state width="1465" height="364" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185059" />
+    <state width="1465" height="364" key="GridCell.Tab.1.center" timestamp="1613652185058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551603" />
-    <state width="1630" height="95" key="GridCell.Tab.1.left" timestamp="1613640551603">
+    <state width="1465" height="364" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185058" />
+    <state width="1465" height="364" key="GridCell.Tab.1.left" timestamp="1613652185058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551603" />
-    <state width="1630" height="95" key="GridCell.Tab.1.right" timestamp="1613640551603">
+    <state width="1465" height="364" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185058" />
+    <state width="1465" height="364" key="GridCell.Tab.1.right" timestamp="1613652185059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551603" />
+    <state width="1465" height="364" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185059" />
     <state width="1008" height="326" key="GridCell.Tab.10.bottom" timestamp="1610815086602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -401,22 +443,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1008" height="326" key="GridCell.Tab.10.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610815086601" />
-    <state width="1630" height="95" key="GridCell.Tab.2.bottom" timestamp="1613640551604">
+    <state width="1465" height="364" key="GridCell.Tab.2.bottom" timestamp="1613652185060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551604" />
-    <state width="1630" height="95" key="GridCell.Tab.2.center" timestamp="1613640551603">
+    <state width="1465" height="364" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185060" />
+    <state width="1465" height="364" key="GridCell.Tab.2.center" timestamp="1613652185060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551603" />
-    <state width="1630" height="95" key="GridCell.Tab.2.left" timestamp="1613640551603">
+    <state width="1465" height="364" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185060" />
+    <state width="1465" height="364" key="GridCell.Tab.2.left" timestamp="1613652185060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551603" />
-    <state width="1630" height="95" key="GridCell.Tab.2.right" timestamp="1613640551603">
+    <state width="1465" height="364" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185060" />
+    <state width="1465" height="364" key="GridCell.Tab.2.right" timestamp="1613652185060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1630" height="95" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613640551603" />
+    <state width="1465" height="364" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613652185060" />
     <state width="1596" height="342" key="GridCell.Tab.3.bottom" timestamp="1612636124278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -501,13 +543,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="143" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613585171787" />
-    <state x="136" y="244" key="run.anything.popup" timestamp="1613593987527">
+    <state x="136" y="244" key="run.anything.popup" timestamp="1613650814393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="136" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1613593987527" />
-    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1613639837961">
+    <state x="136" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1613650814393" />
+    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1613651692780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1613639837961" />
+    <state x="1094" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1613651692780" />
   </component>
 </project>

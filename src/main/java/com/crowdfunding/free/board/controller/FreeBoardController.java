@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,10 +35,13 @@ public class FreeBoardController {
         PageMaker pageMaker = new PageMaker();
         int countingData = 0;
 
-
         try {
 
             list = service.getBoardList(criteria);
+            /**
+             * ================default=================
+             * criteria.perPageNum = 10; :: 페이지 당 출력되는 게시글의 수
+             */
             countingData = service.getCountingData(criteria);
 
             pageMaker.setCriteria(criteria);
@@ -55,22 +59,27 @@ public class FreeBoardController {
     }
 
     @GetMapping("/board/detail")
-    public String boardDetail(@RequestParam("page") int page, @RequestParam("num") int num,
-                              @RequestParam("total") int total, Model model) throws Exception {
+    public String boardDetail(@RequestParam("page") int page, @RequestParam("num") int num, HttpServletRequest request, Model model) throws Exception {
 
         FreeBoardVo data = new FreeBoardVo();
+        int maxNum = 0;
+
 
         try {
-            service.updateViewCnt(num);
-            data = service.getDetailData(num);
+            num = Integer.parseInt(request.getParameter("num"));
+            maxNum = service.getMaxNum();
+            service.updateViewCnt(num); // 조회수 증가
+            data = service.getDetailData(num); // 상세 데이터
+
         } catch (Exception e) {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
+
         model.addAttribute("data", data);
-        model.addAttribute("page", page);
-        model.addAttribute("num", num);
-        model.addAttribute("total", total);
+        model.addAttribute("page", page); // 2페이지에서 왔으면 다시 2페이지로 보낼때 사용
+        model.addAttribute("num", num); // 이전페이지 다음 페이지 작성 할때 사용
+        model.addAttribute("maxNum", maxNum); // 이전페이지 다음 페이지 작성 할때 사용
 
         logger.info(data.toString());
 

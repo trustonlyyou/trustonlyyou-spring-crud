@@ -30,6 +30,13 @@
         ]]>
     </select>
 
+    <select id="maxNum" resultType="int">
+        select
+            max(bno) as num
+        from
+            freeboard
+    </select>
+
     <select id="detailData" parameterType="int" resultType="com.crowdfunding.free.board.entity.FreeBoardVo">
         <![CDATA[
             select
@@ -118,6 +125,6 @@
         delete from
             freeboard
         where
-            bno = ${num}
+            bno = #{numId}
     </delete>
 </mapper>

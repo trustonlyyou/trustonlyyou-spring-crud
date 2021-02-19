@@ -57,34 +57,8 @@
     <div style="text-align: right;">
         <h2>
             <a class="btn btn-list" href="/crowdfunding/free/userBoard/myBoardList">목록</a>
-<%--            http://localhost:8080/crowdfunding/free/board/listPage?page=2--%>
-<%--            http://localhost:8080/crowdfunding/free/board/detail/?num=117--%>
         </h2>
     </div>
-
-<%--    <div>--%>
-<%--        <table>--%>
-<%--            <tbody>--%>
-<%--            <tr>--%>
-<%--                <c:if test="${total == num}">--%>
-<%--                    <th>다음 글이 없습니다.</th>--%>
-<%--                </c:if>--%>
-<%--                <c:if test="${total != num}">--%>
-<%--                    <th><a href="/crowdfunding/free/board/detail/?page=${page}&num=${num + 1}&total=${total}">다음글</a></th>--%>
-<%--                </c:if>--%>
-<%--            </tr>--%>
-
-<%--            <tr>--%>
-<%--                <c:if test="${num == 1}">--%>
-<%--                    <th>이전 글이 없습니다.</th>--%>
-<%--                </c:if>--%>
-<%--                <c:if test="${num != 1}">--%>
-<%--                    <th><a href="/crowdfunding/free/board/detail?page=${page}&num=${num - 1}&total=${total}">이전글</a></th>--%>
-<%--                </c:if>--%>
-<%--            </tr>--%>
-<%--            </tbody>--%>
-<%--        </table>--%>
-<%--    </div>--%>
 </main>
 </body>
 </html>
